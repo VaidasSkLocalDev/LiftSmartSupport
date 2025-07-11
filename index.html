@@ -1,175 +1,518 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BFIT</title>
-  <!-- -------- anime css ------ -->
-  <link rel="stylesheet" href="assets/css/animate.css">
-  <!-- --------- tiny slider css ------ -->
-  <link rel="stylesheet" href="assets/css/tiny-slider.css">
-  <!-- --------- font awsome css ------ -->
-  <link rel="stylesheet" href="assets/css/all.css">
-  <!-- -------- venobox css ------- -->
-  <link rel="stylesheet" href="assets/css/venobox.css" type="text/css" media="screen" />
-  <!-- ---- Bootstrap css--- -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <!-- ---------- default css --------- -->
-  <link rel="stylesheet" href="assets/css/default.css">
-  <!-- --- style css -->
-  <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiftSmart - Smart Fitness Tracking</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            /* Light Mode Colors */
+            --error-state-light: #FF5E52;
+            --primary-button-light: #368DEB;
+            --primary-gradient-light: #D6E6FF;
+            --primary-gradient-secondary-light: #F0F7FE;
+            --primary-text-light: #1F2937;
+            --secondary-button-light: #FFFFFF;
+            --secondary-gradient-light: #E0F7FA;
+            --secondary-gradient-secondary-light: #F1F9FE;
+            --secondary-gradient-complementary-light: #FFFFFF;
+            --secondary-text-light: #4B5563;
+            
+            /* Dark Mode Colors */
+            --error-state-dark: #B12A30;
+            --primary-button-dark: #4A9FFF;
+            --primary-gradient-dark: #1A1A2E;
+            --primary-gradient-secondary-dark: #2F3446;
+            --primary-text-dark: #FFFFFF;
+            --secondary-button-dark: #374151;
+            --secondary-gradient-dark: #004466;
+            --secondary-gradient-secondary-dark: #2B526E;
+            --secondary-gradient-complementary-dark: rgba(255, 255, 255, 0.2);
+            --secondary-text-dark: #D1D5DB;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--primary-text-light);
+            background: linear-gradient(135deg, var(--primary-gradient-light), var(--primary-gradient-secondary-light));
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode {
+            color: var(--primary-text-dark);
+            background: linear-gradient(135deg, var(--primary-gradient-dark), var(--primary-gradient-secondary-dark));
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-button-light);
+            text-decoration: none;
+        }
+
+        .dark-mode .logo {
+            color: var(--primary-button-dark);
+        }
+
+        .theme-toggle {
+            background: var(--secondary-button-light);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            color: var(--primary-text-light);
+            transition: all 0.3s ease;
+        }
+
+        .dark-mode .theme-toggle {
+            background: var(--secondary-button-dark);
+            color: var(--primary-text-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, var(--primary-button-light), var(--secondary-gradient-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .dark-mode .hero h1 {
+            background: linear-gradient(45deg, var(--primary-button-dark), var(--secondary-gradient-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--secondary-text-light);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .dark-mode .hero p {
+            color: var(--secondary-text-dark);
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, var(--primary-button-light), var(--secondary-gradient-light));
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            color: white;
+        }
+
+        .dark-mode .cta-button {
+            background: linear-gradient(45deg, var(--primary-button-dark), var(--secondary-gradient-dark));
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background: var(--secondary-gradient-complementary-light);
+        }
+
+        .dark-mode .features {
+            background: var(--secondary-gradient-complementary-dark);
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary-text-light);
+        }
+
+        .dark-mode .features h2 {
+            color: var(--primary-text-dark);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .dark-mode .feature-card {
+            background: rgba(55, 65, 81, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary-button-light);
+            margin-bottom: 1rem;
+        }
+
+        .dark-mode .feature-icon {
+            color: var(--primary-button-dark);
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-text-light);
+        }
+
+        .dark-mode .feature-card h3 {
+            color: var(--primary-text-dark);
+        }
+
+        .feature-card p {
+            color: var(--secondary-text-light);
+        }
+
+        .dark-mode .feature-card p {
+            color: var(--secondary-text-dark);
+        }
+
+        /* Download Section */
+        .download {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .download h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--primary-text-light);
+        }
+
+        .dark-mode .download h2 {
+            color: var(--primary-text-dark);
+        }
+
+        .download p {
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            color: var(--secondary-text-light);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .dark-mode .download p {
+            color: var(--secondary-text-dark);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--secondary-gradient-light);
+            padding: 40px 0 20px;
+            color: var(--primary-text-light);
+        }
+
+        .dark-mode .footer {
+            background: var(--secondary-gradient-dark);
+            color: var(--primary-text-dark);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-button-light);
+        }
+
+        .dark-mode .footer-section h3 {
+            color: var(--primary-button-dark);
+        }
+
+        .footer-section a {
+            color: var(--secondary-text-light);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .dark-mode .footer-section a {
+            color: var(--secondary-text-dark);
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-button-light);
+        }
+
+        .dark-mode .footer-section a:hover {
+            color: var(--primary-button-dark);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--secondary-text-light);
+        }
+
+        .dark-mode .footer-bottom {
+            color: var(--secondary-text-dark);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .features h2,
+            .download h2 {
+                font-size: 2rem;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
 </head>
-
 <body>
-  <!-- --------- preloader ------------ -->
-  <div class="preloader">
-    <div class="loader">
-      <div class="spinner">
-        <div class="spinner-container">
-          <div class="spinner-rotator">
-            <div class="spinner-left">
-              <div class="spinner-circle"></div>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">LiftSmart</a>
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <i class="fas fa-moon"></i>
+                </button>
             </div>
-            <div class="spinner-right">
-              <div class="spinner-circle"></div>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </div>
+    </header>
 
-  <!-------   Header star ------>
-  <header class="header-area">
-    <div class="header-hero" data-scroll-index="0">
-      <!---- home star ------>
-      <div class="container">
-        <div class="row align-items-center justify-content-center justify-content-lg-between">
-          <div class="col-lg-6 col-md-10">
-            <div class="header-hero-content">
-              <h1 class="navbar-brand" href="#">
-                <img class="image" src="assets/img/header/logo/BFIT-logo.png" alt="">
-              </h1>
-              <h1 class="header-title wow fadeInLeftBig" data-wow-duration="1.5s" data-wow-delay="0.15s"><span>BFIT fitness
-                  App</span></h1>
-              <p class="text wow fadeInLeftBig" data-wow-duration="1.5s" data-wow-delay="0.15s">BFIT is a comprehensive fitness app designed to help people introduce physical activity into their daily lives, strengthen their bodies and minds, and feel better overall. The app offers easy-to-follow, no equipment required training programs for both men and women that can be done anywhere, whether you're at home or outdoors.</p>
-              <p class="text wow fadeInLeftBig" data-wow-duration="1.5s" data-wow-delay="0.15s">The workouts start out easy and gradually become more challenging as you progress through the weeks, ensuring that your body never stops progressing. With BFIT, you'll always be pushing yourself to achieve your goals and improve your fitness level.</p>
-              <p class="text wow fadeInLeftBig" data-wow-duration="1.5s" data-wow-delay="0.15s">For those who have access to gym equipment, BFIT also offers programs that incorporate weights, machines, and other equipment to help you take your workouts to the next level. These programs are designed to challenge you and help you build strength and endurance, so you can achieve your fitness goals even faster.</p>
-              <p class="text wow fadeInLeftBig" data-wow-duration="1.5s" data-wow-delay="0.15s">Whether you're a beginner or an experienced fitness enthusiast, BFIT has something to offer. With its easy-to-use interface, detailed workout instructions, and personalized progress tracking, BFIT is the perfect app for anyone looking to improve their health and fitness. So why wait? Download BFIT today and start your journey towards a healthier, stronger you!</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="fade-in-up">Transform Your Fitness Journey</h1>
+            <p class="fade-in-up">LiftSmart is your intelligent fitness companion that helps you track workouts, monitor progress, and achieve your fitness goals with smart analytics and personalized recommendations.</p>
+            <div class="fade-in-up">
+                <!-- Download and Learn More buttons removed -->
             </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="header-image">
-              <img src="assets/img/header/login-image.png" alt="" class="image-1  wow fadeInRightBig"
-                data-wow-duration="1.5s" data-wow-delay="0.25s">
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-    <!---- home star ------>
-  </header>
-  <!--------   Header End ----  -->
+    </section>
 
-  <!-- ----------- Download Section Start ------- -->
-  <section class="download-area pt-70 pb-40" data-scroll-index="6">
-    <div class="container">
-      <div class="row justify-content-center align-items-center">
-        <div class="col-lg-6 col-md-9">
-          <div class="download-image mt-50 wow fadeInLeftBig" data-wow-duration="1.5s" data-wow-delay="0.25s">
-            <img src="assets/img/download/download-image.png" alt="" class="image-3">
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="download-content mt-45 wow fadeInRightBig" data-wow-duration="1.5s" data-wow-delay="0.25s">
-            <h1 class="title">Download and Start Using!</h1>
-            <p class="text">Get started on your fitness journey today by downloading BFIT on the App Store. With our easy-to-follow workout programs, personalized progress tracking, and challenging routines, you'll be on your way to a stronger, healthier you in no time. Whether you're a beginner or a seasoned fitness enthusiast, BFIT has everything you need to reach your fitness goals. So why wait? Download BFIT on the App Store now and start your journey towards a better you!</p>
-            <ul>
-              <li><a href="" class="app-store">
-                  <img src="assets/img/download/app-store.png" alt="">
-                </a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ----------- Download Section End ------- -->
-  <!-- --------------Footer Section Start ------- -->
-  <footer class="footer-area">
-    <div class="footer-widget pt-30 pb-80">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div class="footer-about mt-50">
-              <a href="" class="logo">
-                <img src="assets/img/header/logo/BFIT-logo.png" alt="">
-              </a>
-              <p class="text">On our instagram page, you'll find motivational quotes, videos showcasing our workouts, and updates on our latest workout programs. We also love to hear from our followers, so don't hesitate to leave a comment or send us a message with any questions or feedback you may have. Whether you're just starting out on your fitness journey or you're a seasoned athlete, we're here to help you introduce physical activity into your life, strengthen your body and mind, and feel better overall.</p>
-            </div>
-          </div>
-          <div class="col-lg-5 col-md-6">
-            <div class="footer-link d-flex flex-wrap">
-              <div class="footer-link-wrapper mt-45">
-                <div class="footer-title">
-                  <h4 class="title">Quick Links</h4>
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="fade-in-up">Why Choose LiftSmart?</h2>
+            <div class="feature-grid">
+
+                <div class="feature-card fade-in-up">
+                    <i class="fas fa-dumbbell feature-icon"></i>
+                    <h3>Workout Tracking</h3>
+                    <p>Log your workouts, sets, and reps with our intuitive interface designed for lifters.</p>
                 </div>
-                <ul class="link">
-                  <li><a href="https://vaidassklocaldev.github.io/fitnessAppSupport/PrivacyPolicy.html">Privacy Policy</a></li>
-                  <li><a href="https://vaidassklocaldev.github.io/fitnessAppSupport/TermsAndConditions.html">Terms & Conditions</a></li>
-                  <li><a href=https://vaidassklocaldev.github.io/fitnessAppSupport/DeleteInstructions.html">Delete instructions</a></li>
-                </ul>
-              </div>
-              <div class="footer-link-wrapper mt-45">
-                <div class="footer-title">
-                  <h4 class="title">Support</h4>
+                <div class="feature-card fade-in-up">
+                    <i class="fas fa-plus-circle feature-icon"></i>
+                    <h3>Creating Personalised Workouts</h3>
+                    <p>Design custom workout programs and exercises tailored to your specific fitness goals and preferences.</p>
                 </div>
-                <ul class="link">
-                  <li><p>bfitappfeedback@gmail.com</p></li>
-                  <ul class="social">
-                    <li><a href="https://www.instagram.com/bfitappfeedback/"><i class="fab fa-instagram"></i></a></li>
-                  </ul>
-                </ul>
-              </div>
+                <div class="feature-card fade-in-up">
+                    <i class="fas fa-chart-line feature-icon"></i>
+                    <h3>Mesocycle Planning</h3>
+                    <p>Advanced training cycles with automatic volume adjustments based on your performance and inputs.</p>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="lo-lg-12">
-            <div class="copyright">
-              <div class="copyright-text text-center">
-                <p class="text">Copyright &#169; 2023 <a href="">VaidasSk</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!-- --------------Footer Section End ------- -->
+    </section>
 
-  <!-- ---- jquery Js ---- -->
-  <script src="assets/js/jquery-1.12.4.min.js"></script>
-  <!-- -------- venobox js ------ -->
-  <script type="text/javascript" src="assets/js/venobox.min.js"></script>
-  <!-- ---------- wow js ---------- -->
-  <script src="assets/js/wow.min.js"></script>
-  <!-- ---------- tiny slider js --------- -->
-  <script src="assets/js/tiny-slider.js"></script>
-  <!-- ---------- scrollit js ---------- -->
-  <script src="assets/js/scrollIt.min.js"></script>
-  <!-- -------- font awsome js --------- -->
-  <script src="assets/js/all.js"></script>
-  <!-- ---- Bootstrap Js ---- -->
-  <script src="assets/js/bootstrap.min.js"></script>
-  <!-- ---- main js --- -->
-  <script src="assets/js/main.js"></script>
+    <!-- Download Section -->
+    <section class="download">
+        <div class="container">
+            <h2 class="fade-in-up">Ready to Start Your Journey?</h2>
+            <p class="fade-in-up">Join thousands of users who have transformed their fitness with LiftSmart. Download now and take the first step towards your goals.</p>
+            <div class="fade-in-up">
+                <a href="#" class="cta-button">Download for iOS</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>LiftSmart</h3>
+                    <p>Your intelligent fitness companion for tracking workouts, monitoring progress, and achieving your fitness goals.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="PrivacyPolicy.html">Privacy Policy</a>
+                    <a href="TermsAndConditions.html">Terms & Conditions</a>
+                    <a href="DeleteInstructions.html">Delete Instructions</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <a href="mailto:bfitappfeedback@gmail.com">bfitappfeedback@gmail.com</a>
+                    <a href="https://www.instagram.com/liftsmartapp/"><i class="fab fa-instagram"></i> @liftsmartapp</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LiftSmart. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Theme Toggle Functionality
+        function toggleTheme() {
+            const body = document.body;
+            const themeToggle = document.querySelector('.theme-toggle i');
+            
+            if (body.classList.contains('dark-mode')) {
+                body.classList.remove('dark-mode');
+                themeToggle.className = 'fas fa-moon';
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.classList.add('dark-mode');
+                themeToggle.className = 'fas fa-sun';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Load saved theme
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            const themeToggle = document.querySelector('.theme-toggle i');
+            
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                themeToggle.className = 'fas fa-sun';
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with fade-in-up class
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            observer.observe(el);
+        });
+    </script>
 </body>
-
 </html>

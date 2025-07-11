@@ -1,95 +1,452 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LANDAPP</title>
-  <!-- -------- anime css ------ -->
-  <link rel="stylesheet" href="assets/css/animate.css">
-  <!-- --------- tiny slider css ------ -->
-  <link rel="stylesheet" href="assets/css/tiny-slider.css">
-  <!-- --------- font awsome css ------ -->
-  <link rel="stylesheet" href="assets/css/all.css">
-  <!-- -------- venobox css ------- -->
-  <link rel="stylesheet" href="assets/css/venobox.css" type="text/css" media="screen" />
-  <!-- ---- Bootstrap css--- -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <!-- ---------- default css --------- -->
-  <link rel="stylesheet" href="assets/css/default.css">
-  <!-- --- style css -->
-  <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Instructions - LiftSmart</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            /* Light Mode Colors */
+            --error-state-light: #FF5E52;
+            --primary-button-light: #368DEB;
+            --primary-gradient-light: #D6E6FF;
+            --primary-gradient-secondary-light: #F0F7FE;
+            --primary-text-light: #1F2937;
+            --secondary-button-light: #FFFFFF;
+            --secondary-gradient-light: #E0F7FA;
+            --secondary-gradient-secondary-light: #F1F9FE;
+            --secondary-gradient-complementary-light: #FFFFFF;
+            --secondary-text-light: #4B5563;
+            
+            /* Dark Mode Colors */
+            --error-state-dark: #B12A30;
+            --primary-button-dark: #4A9FFF;
+            --primary-gradient-dark: #1A1A2E;
+            --primary-gradient-secondary-dark: #2F3446;
+            --primary-text-dark: #FFFFFF;
+            --secondary-button-dark: #374151;
+            --secondary-gradient-dark: #004466;
+            --secondary-gradient-secondary-dark: #2B526E;
+            --secondary-gradient-complementary-dark: rgba(255, 255, 255, 0.2);
+            --secondary-text-dark: #D1D5DB;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--primary-text-light);
+            background: linear-gradient(135deg, var(--primary-gradient-light), var(--primary-gradient-secondary-light));
+            transition: all 0.3s ease;
+            min-height: 100vh;
+        }
+
+        body.dark-mode {
+            color: var(--primary-text-dark);
+            background: linear-gradient(135deg, var(--primary-gradient-dark), var(--primary-gradient-secondary-dark));
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-button-light);
+            text-decoration: none;
+        }
+
+        .dark-mode .logo {
+            color: var(--primary-button-dark);
+        }
+
+        .theme-toggle {
+            background: var(--secondary-button-light);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            color: var(--primary-text-light);
+            transition: all 0.3s ease;
+        }
+
+        .dark-mode .theme-toggle {
+            background: var(--secondary-button-dark);
+            color: var(--primary-text-dark);
+        }
+
+        .back-button {
+            background: var(--secondary-button-light);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            color: var(--primary-text-light);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .dark-mode .back-button {
+            background: var(--secondary-button-dark);
+            color: var(--primary-text-dark);
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            color: var(--primary-text-light);
+        }
+
+        .dark-mode .back-button:hover {
+            color: var(--primary-text-dark);
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 120px 0 80px;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .dark-mode .content-card {
+            background: rgba(55, 65, 81, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--primary-text-light);
+            text-align: center;
+        }
+
+        .dark-mode .page-title {
+            color: var(--primary-text-dark);
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: var(--secondary-text-light);
+            text-align: center;
+        }
+
+        .dark-mode .intro-text {
+            color: var(--secondary-text-dark);
+        }
+
+        .steps-container {
+            margin-top: 3rem;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--secondary-gradient-complementary-light);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .dark-mode .step {
+            background: var(--secondary-gradient-complementary-dark);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .step-number {
+            background: linear-gradient(45deg, var(--primary-button-light), var(--secondary-gradient-light));
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .dark-mode .step-number {
+            background: linear-gradient(45deg, var(--primary-button-dark), var(--secondary-gradient-dark));
+        }
+
+        .step-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-text-light);
+        }
+
+        .dark-mode .step-content h3 {
+            color: var(--primary-text-dark);
+        }
+
+        .step-content p {
+            color: var(--secondary-text-light);
+            margin-bottom: 0;
+        }
+
+        .dark-mode .step-content p {
+            color: var(--secondary-text-dark);
+        }
+
+        .highlight {
+            background: linear-gradient(45deg, var(--primary-button-light), var(--secondary-gradient-light));
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .dark-mode .highlight {
+            background: linear-gradient(45deg, var(--primary-button-dark), var(--secondary-gradient-dark));
+        }
+
+        .warning-box {
+            background: linear-gradient(45deg, var(--error-state-light), #ff8a80);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .dark-mode .warning-box {
+            background: linear-gradient(45deg, var(--error-state-dark), #d32f2f);
+        }
+
+        .warning-box i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--secondary-gradient-light);
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--primary-text-light);
+            margin-top: 3rem;
+        }
+
+        .dark-mode .footer {
+            background: var(--secondary-gradient-dark);
+            color: var(--primary-text-dark);
+        }
+
+        .footer a {
+            color: var(--primary-button-light);
+            text-decoration: none;
+        }
+
+        .dark-mode .footer a {
+            color: var(--primary-button-dark);
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .content-card {
+                padding: 2rem;
+            }
+            
+            .step {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .step-number {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
 </head>
-
 <body>
-  <!-- --------- preloader ------------ -->
-  <div class="preloader">
-    <div class="loader">
-      <div class="spinner">
-        <div class="spinner-container">
-          <div class="spinner-rotator">
-            <div class="spinner-left">
-              <div class="spinner-circle"></div>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">LiftSmart</a>
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <i class="fas fa-moon"></i>
+                </button>
             </div>
-            <div class="spinner-right">
-              <div class="spinner-circle"></div>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </div>
+    </header>
 
-  <!-------   Header star ------>
-  <header class="header-area">
-    <div class="header-hero" data-scroll-index="0">
-      <!---- home star ------>
-      <div class="container">
-        <div class="row align-items-center justify-content-center justify-content-lg-between">
-          <div class="col-lg-6 col-md-10">
-            <div class="header-hero-content">
-              <h1 class="navbar-brand" href="#">
-                <img class="image" src="assets/img/header/logo/BFIT-logo.png" alt="">
-              </h1>
-              <h1 class="header-title wow fadeInLeftBig" data-wow-duration="3s" data-wow-delay="0.2s"><span>Delete instructions</span></h1>
-            <p class="text wow fadeInLeftBig" data-wow-duration="1.5s" data-wow-delay="0.15s">If you want to delete your data from Chqbook App, you can remove your information by following these steps</p>
-            <p class="text wow fadeInLeftBig" data-wow-duration="1.5s" data-wow-delay="0.15s">1. Go to your Facebook Account’s Setting & Privacy. Click “Settings”</p>
-            <p class="text wow fadeInLeftBig" data-wow-duration="1.5s" data-wow-delay="0.15s">2. Look for “Apps and Websites” and you will see all of the apps and websites you linked with your Facebook</p>
-            <p class="text wow fadeInLeftBig" data-wow-duration="1.5s" data-wow-delay="0.15s">3. Search and Click “BFIT fitness” in the search bar</p>
-            <p class="text wow fadeInLeftBig" data-wow-duration="1.5s" data-wow-delay="0.15s">4. Scroll and click “Remove”</p>
-            <p class="text wow fadeInLeftBig" data-wow-duration="1.5s" data-wow-delay="0.15s">5. Congratulations, you have successfully removed your app activities and data from the Chqbook App</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="header-shape-1"></div>
-        <div class="header-shape-2">
-          <img src="assets/img/header/header-shape-2.svg" alt="">
-        </div>
-      </div>
-    </div>
-    <!---- home star ------>
-  </header>
-  <!--------   Header End ----  -->
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-card fade-in-up">
+                <h1 class="page-title">Delete Your Account</h1>
+                <p class="intro-text">
+                    We respect your privacy and make it easy to delete your account and all associated data. 
+                    Follow these simple steps to permanently remove your information from LiftSmart.
+                </p>
 
-  <!-- ---- jquery Js ---- -->
-  <script src="assets/js/jquery-1.12.4.min.js"></script>
-  <!-- -------- venobox js ------ -->
-  <script type="text/javascript" src="assets/js/venobox.min.js"></script>
-  <!-- ---------- wow js ---------- -->
-  <script src="assets/js/wow.min.js"></script>
-  <!-- ---------- tiny slider js --------- -->
-  <script src="assets/js/tiny-slider.js"></script>
-  <!-- ---------- scrollit js ---------- -->
-  <script src="assets/js/scrollIt.min.js"></script>
-  <!-- -------- font awsome js --------- -->
-  <script src="assets/js/all.js"></script>
-  <!-- ---- Bootstrap Js ---- -->
-  <script src="assets/js/bootstrap.min.js"></script>
-  <!-- ---- main js --- -->
-  <script src="assets/js/main.js"></script>
+                <div class="warning-box">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>Important Notice</h3>
+                    <p>Deleting your account is permanent and cannot be undone. All your data, including workout history, progress, and personal information will be permanently removed.</p>
+                </div>
+
+                <div class="steps-container">
+                    <div class="step fade-in-up">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Go to Profile Tab</h3>
+                            <p>Open the LiftSmart app and tap the <span class="highlight">Profile</span> tab at the bottom of the screen.</p>
+                        </div>
+                    </div>
+                    <div class="step fade-in-up">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Scroll to the Bottom</h3>
+                            <p>Scroll down to the bottom of your profile page.</p>
+                        </div>
+                    </div>
+                    <div class="step fade-in-up">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Tap Delete Account</h3>
+                            <p>Tap the <span class="highlight">Delete Account</span> button and confirm your choice. Your account and all associated data will be permanently deleted.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="warning-box" style="margin-top: 3rem;">
+                    <i class="fas fa-info-circle"></i>
+                    <h3>Need Help?</h3>
+                    <p>If you encounter any issues during the deletion process or have questions, please contact our support team at <a href="mailto:bfitappfeedback@gmail.com" style="color: white; text-decoration: underline;">bfitappfeedback@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 LiftSmart. All rights reserved. | 
+                <a href="PrivacyPolicy.html">Privacy Policy</a> | 
+                <a href="TermsAndConditions.html">Terms & Conditions</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Theme Toggle Functionality
+        function toggleTheme() {
+            const body = document.body;
+            const themeToggle = document.querySelector('.theme-toggle i');
+            
+            if (body.classList.contains('dark-mode')) {
+                body.classList.remove('dark-mode');
+                themeToggle.className = 'fas fa-moon';
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.classList.add('dark-mode');
+                themeToggle.className = 'fas fa-sun';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Load saved theme
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            const themeToggle = document.querySelector('.theme-toggle i');
+            
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                themeToggle.className = 'fas fa-sun';
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with fade-in-up class
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            observer.observe(el);
+        });
+    </script>
 </body>
-
 </html>
