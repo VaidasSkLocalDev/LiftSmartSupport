@@ -1,494 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - LiftSmart</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        :root {
-            /* Light Mode Colors */
-            --error-state-light: #FF5E52;
-            --primary-button-light: #368DEB;
-            --primary-gradient-light: #D6E6FF;
-            --primary-gradient-secondary-light: #F0F7FE;
-            --primary-text-light: #1F2937;
-            --secondary-button-light: #FFFFFF;
-            --secondary-gradient-light: #E0F7FA;
-            --secondary-gradient-secondary-light: #F1F9FE;
-            --secondary-gradient-complementary-light: #FFFFFF;
-            --secondary-text-light: #4B5563;
-            
-            /* Dark Mode Colors */
-            --error-state-dark: #B12A30;
-            --primary-button-dark: #4A9FFF;
-            --primary-gradient-dark: #1A1A2E;
-            --primary-gradient-secondary-dark: #2F3446;
-            --primary-text-dark: #FFFFFF;
-            --secondary-button-dark: #374151;
-            --secondary-gradient-dark: #004466;
-            --secondary-gradient-secondary-dark: #2B526E;
-            --secondary-gradient-complementary-dark: rgba(255, 255, 255, 0.2);
-            --secondary-text-dark: #D1D5DB;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--primary-text-light);
-            background: linear-gradient(135deg, var(--primary-gradient-light), var(--primary-gradient-secondary-light));
-            transition: all 0.3s ease;
-        }
-
-        body.dark-mode {
-            color: var(--primary-text-dark);
-            background: linear-gradient(135deg, var(--primary-gradient-dark), var(--primary-gradient-secondary-dark));
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        .header {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--primary-button-light);
-            text-decoration: none;
-        }
-
-        .dark-mode .logo {
-            color: var(--primary-button-dark);
-        }
-
-        .theme-toggle {
-            background: var(--secondary-button-light);
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            cursor: pointer;
-            color: var(--primary-text-light);
-            transition: all 0.3s ease;
-        }
-
-        .dark-mode .theme-toggle {
-            background: var(--secondary-button-dark);
-            color: var(--primary-text-dark);
-        }
-
-        /* Main Content */
-        .main-content {
-            padding: 120px 0 80px;
-        }
-
-        .content-card {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .dark-mode .content-card {
-            background: rgba(55, 65, 81, 0.9);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .page-title {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--primary-text-light);
-            text-align: center;
-        }
-
-        .dark-mode .page-title {
-            color: var(--primary-text-dark);
-        }
-
-        .last-updated {
-            text-align: center;
-            color: var(--secondary-text-light);
-            margin-bottom: 3rem;
-            font-style: italic;
-        }
-
-        .dark-mode .last-updated {
-            color: var(--secondary-text-dark);
-        }
-
-        .section {
-            margin-bottom: 3rem;
-        }
-
-        .section h2 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary-button-light);
-            border-bottom: 2px solid var(--primary-button-light);
-            padding-bottom: 0.5rem;
-        }
-
-        .dark-mode .section h2 {
-            color: var(--primary-button-dark);
-            border-bottom-color: var(--primary-button-dark);
-        }
-
-        .section h3 {
-            font-size: 1.4rem;
-            margin: 2rem 0 1rem 0;
-            color: var(--primary-text-light);
-        }
-
-        .dark-mode .section h3 {
-            color: var(--primary-text-dark);
-        }
-
-        .section p {
-            margin-bottom: 1rem;
-            color: var(--secondary-text-light);
-        }
-
-        .dark-mode .section p {
-            color: var(--secondary-text-dark);
-        }
-
-        .section ul {
-            margin: 1rem 0;
-            padding-left: 2rem;
-        }
-
-        .section li {
-            margin-bottom: 0.5rem;
-            color: var(--secondary-text-light);
-        }
-
-        .dark-mode .section li {
-            color: var(--secondary-text-dark);
-        }
-
-        .highlight {
-            background: linear-gradient(45deg, var(--primary-button-light), var(--secondary-gradient-light));
-            color: white;
-            padding: 0.2rem 0.5rem;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        .dark-mode .highlight {
-            background: linear-gradient(45deg, var(--primary-button-dark), var(--secondary-gradient-dark));
-        }
-
-        .contact-info {
-            background: var(--secondary-gradient-complementary-light);
-            padding: 2rem;
-            border-radius: 15px;
-            margin: 2rem 0;
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .dark-mode .contact-info {
-            background: var(--secondary-gradient-complementary-dark);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .contact-info h3 {
-            color: var(--primary-button-light);
-            margin-bottom: 1rem;
-        }
-
-        .dark-mode .contact-info h3 {
-            color: var(--primary-button-dark);
-        }
-
-        .contact-info a {
-            color: var(--primary-button-light);
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .dark-mode .contact-info a {
-            color: var(--primary-button-dark);
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--secondary-gradient-light);
-            padding: 2rem 0;
-            text-align: center;
-            color: var(--primary-text-light);
-            margin-top: 3rem;
-        }
-
-        .dark-mode .footer {
-            background: var(--secondary-gradient-dark);
-            color: var(--primary-text-dark);
-        }
-
-        .footer a {
-            color: var(--primary-button-light);
-            text-decoration: none;
-        }
-
-        .dark-mode .footer a {
-            color: var(--primary-button-dark);
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .page-title {
-                font-size: 2rem;
-            }
-            
-            .content-card {
-                padding: 2rem;
-            }
-            
-            .section h2 {
-                font-size: 1.5rem;
-            }
-            
-            .section h3 {
-                font-size: 1.2rem;
-            }
-        }
-
-        /* Animation */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in-up {
-            animation: fadeInUp 0.8s ease-out;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — LiftSmart</title>
+  <meta name="description" content="How LiftSmart collects, uses and protects your data.">
+  <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <a href="index.html" class="logo">LiftSmart</a>
-                <button class="theme-toggle" onclick="toggleTheme()">
-                    <i class="fas fa-moon"></i>
-                </button>
-            </div>
-        </div>
-    </header>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <div class="container">
-            <div class="content-card fade-in-up">
-                <h1 class="page-title">Privacy Policy</h1>
-                <p class="last-updated">Last updated: January 15, 2024</p>
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6.5 6.5v11M17.5 6.5v11M3 9v6M21 9v6M6.5 12h11"/></svg>
+      </span>
+      LiftSmart
+    </a>
+    <div class="nav-links">
+      <a href="index.html#features">Features</a>
+      <a href="PrivacyPolicy.html">Privacy</a>
+      <a href="TermsAndConditions.html">Terms</a>
+    </div>
+  </div>
+</nav>
 
-                <div class="section fade-in-up">
-                    <h2>Introduction</h2>
-                    <p>This Privacy Policy describes how LiftSmart ("we," "our," or "us") collects, uses, and protects your personal information when you use our fitness tracking application and related services (collectively, the "Service").</p>
-                    <p>We are committed to protecting your privacy and ensuring the security of your personal data. This policy explains your rights regarding your personal information and how we handle it in accordance with applicable data protection laws.</p>
-                </div>
+<main class="legal">
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: 2 August 2026</p>
 
-                <div class="section fade-in-up">
-                    <h2>Information We Collect</h2>
-                    
-                    <h3>Personal Information</h3>
-                    <p>We collect the following types of personal information:</p>
-                    <ul>
-                        <li><strong>Account Information:</strong> Name, email address, username, and password</li>
-                        <li><strong>Profile Information:</strong> Age, gender, height, weight, fitness goals, and profile pictures</li>
-                        <li><strong>Workout Data:</strong> Exercise history, sets, reps, weights, workout duration, and progress tracking</li>
-                        <li><strong>Device Information:</strong> Device type, operating system, and unique device identifiers</li>
-                        <li><strong>Usage Data:</strong> How you interact with the app and features used</li>
-                    </ul>
+  <p>This policy explains what data the LiftSmart iOS app ("LiftSmart", "we", "us") collects, why we collect it, and the choices you have. The short version: we collect what is needed to run your training, we do not sell your data, we do not show ads, and you can delete everything at any time from inside the app.</p>
 
-                    <h3>Automatically Collected Information</h3>
-                    <p>We automatically collect:</p>
-                    <ul>
-                        <li>IP address and location data (with your consent)</li>
-                        <li>App usage statistics and crash reports</li>
-                        <li>Device and browser information</li>
-                    </ul>
-                </div>
+  <div class="toc">
+    <strong>Contents</strong>
+    <ul>
+      <li><a href="#data">1. Data we collect</a></li>
+      <li><a href="#use">2. How we use it</a></li>
+      <li><a href="#sharing">3. Who we share it with</a></li>
+      <li><a href="#analytics">4. Analytics</a></li>
+      <li><a href="#storage">5. Where data is stored</a></li>
+      <li><a href="#retention">6. Retention and deletion</a></li>
+      <li><a href="#rights">7. Your rights</a></li>
+      <li><a href="#children">8. Children</a></li>
+      <li><a href="#changes">9. Changes to this policy</a></li>
+      <li><a href="#contact">10. Contact</a></li>
+    </ul>
+  </div>
 
-                <div class="section fade-in-up">
-                    <h2>How We Use Your Information</h2>
-                    <p>We use your information to:</p>
-                    <ul>
-                        <li><strong>Provide Services:</strong> Deliver and maintain our fitness tracking features</li>
-                        <li><strong>Personalization:</strong> Customize your experience and provide relevant recommendations</li>
-                        <li><strong>Progress Tracking:</strong> Monitor your fitness progress and provide insights</li>
-                        <li><strong>Communication:</strong> Send you important updates and support messages</li>
-                        <li><strong>Improvement:</strong> Analyze usage patterns and improve our services</li>
-                        <li><strong>Security:</strong> Protect against fraud and ensure account security</li>
-                    </ul>
-                </div>
+  <h2 id="data">1. Data we collect</h2>
 
-                <div class="section fade-in-up">
-                    <h2>Information Sharing</h2>
-                    <p>We do not sell, trade, or rent your personal information to third parties. We may share your information only in these limited circumstances:</p>
-                    <ul>
-                        <li><strong>Service Providers:</strong> With trusted third-party services that help us operate our app</li>
-                        <li><strong>Legal Requirements:</strong> When required by law or to protect our rights and safety</li>
-                        <li><strong>Business Transfers:</strong> In connection with a merger, acquisition, or sale of assets</li>
-                        <li><strong>With Your Consent:</strong> When you explicitly authorize us to share your information</li>
-                    </ul>
-                </div>
+  <h3>Account data</h3>
+  <ul>
+    <li><strong>Registered accounts</strong> (Sign in with Apple or Google): your email address and display name as provided by the sign-in provider, account creation and last-login timestamps, and how the account authenticates.</li>
+    <li><strong>Guest accounts</strong>: you can use LiftSmart without registering. A guest account is an anonymous identifier with no email or name attached. If you later register, your training data moves to the registered account.</li>
+  </ul>
 
-                <div class="section fade-in-up">
-                    <h2>Data Security</h2>
-                    <p>We protect your personal information with:</p>
-                    <ul>
-                        <li>End-to-end encryption for sensitive data</li>
-                        <li>Secure cloud storage with industry-standard security</li>
-                        <li>Regular security audits and updates</li>
-                        <li>Access controls and authentication measures</li>
-                    </ul>
-                </div>
+  <h3>Profile data you provide</h3>
+  <ul>
+    <li>Bodyweight and your preferred weight unit (kg/lb) — used to log bodyweight exercises and prescribe loads.</li>
+    <li>Gender (optional) — used only to tailor which workout programs the app shows you.</li>
+    <li>Training preferences from onboarding: training type, goal and experience level.</li>
+  </ul>
 
-                <div class="section fade-in-up">
-                    <h2>Your Rights</h2>
-                    <p>You have these rights regarding your personal information:</p>
-                    <ul>
-                        <li><strong>Access:</strong> Request a copy of your personal data</li>
-                        <li><strong>Correction:</strong> Update or correct inaccurate information</li>
-                        <li><strong>Deletion:</strong> Request deletion of your account and data</li>
-                        <li><strong>Portability:</strong> Export your data in a machine-readable format</li>
-                        <li><strong>Objection:</strong> Object to certain processing activities</li>
-                    </ul>
-                </div>
+  <h3>Training data</h3>
+  <ul>
+    <li>Workouts, workout plans and mesocycles you create or start, the sets, reps, weights and durations you log, session history, and personal records derived from it.</li>
+    <li>Custom exercises you create (name, muscle groups, equipment, optional video link).</li>
+  </ul>
 
-                <div class="section fade-in-up">
-                    <h2>Data Retention</h2>
-                    <p>We retain your personal information for as long as necessary to provide our services. When you delete your account, we will delete or anonymize your personal data within 30 days, except where required by law.</p>
-                </div>
+  <h3>Purchase data</h3>
+  <ul>
+    <li>Subscription status (whether your account has an active premium entitlement). Payment itself is processed entirely by Apple — we never see your payment details.</li>
+  </ul>
 
-                <div class="section fade-in-up">
-                    <h2>Children's Privacy</h2>
-                    <p>Our Service is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13.</p>
-                </div>
+  <h3>Feedback</h3>
+  <ul>
+    <li>If you send feedback from the app, we receive the message you write and, for registered accounts, the email associated with your account so we can reply.</li>
+  </ul>
 
-                <div class="section fade-in-up">
-                    <h2>International Transfers</h2>
-                    <p>Your information may be transferred to and processed in countries other than your own. We ensure such transfers comply with applicable data protection laws.</p>
-                </div>
+  <h3>Usage data</h3>
+  <ul>
+    <li>Anonymous app usage events — screens viewed, features used (for example that <em>a</em> workout was completed and how long it took), app version and device model. See <a href="#analytics">Analytics</a>.</li>
+  </ul>
 
-                <div class="section fade-in-up">
-                    <h2>Changes to This Policy</h2>
-                    <p>We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new policy on this page and updating the "Last updated" date.</p>
-                </div>
+  <div class="note">We do <strong>not</strong> collect your location, contacts, photos, health-app data, or the advertising identifier (IDFA), and the app contains no advertising.</div>
 
-                <div class="contact-info fade-in-up">
-                    <h3>Contact Us</h3>
-                    <p>If you have any questions about this Privacy Policy, please contact us:</p>
-                    <p><strong>Email:</strong> <a href="mailto:bfitappfeedback@gmail.com">bfitappfeedback@gmail.com</a></p>
-                </div>
-            </div>
-        </div>
-    </main>
+  <h2 id="use">2. How we use it</h2>
+  <ul>
+    <li>To provide the service: store and sync your training data, run the mesocycle progression engine, show your history and records.</li>
+    <li>To personalize: match the workout catalog to your training frequency, preferences and (if provided) gender.</li>
+    <li>To operate subscriptions: check whether your account is entitled to premium content.</li>
+    <li>To improve the app: understand which features are used through aggregated usage analytics.</li>
+    <li>To respond when you contact us.</li>
+  </ul>
+  <p>Where the GDPR applies, we rely on the performance of our contract with you (providing the app), your consent (optional data such as gender), and our legitimate interest in improving and securing the service.</p>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 LiftSmart. All rights reserved. | 
-                <a href="TermsAndConditions.html">Terms & Conditions</a> | 
-                <a href="DeleteInstructions.html">Delete Instructions</a>
-            </p>
-        </div>
-    </footer>
+  <h2 id="sharing">3. Who we share it with</h2>
+  <p>We share data only with the service providers that make the app work, acting on our instructions:</p>
+  <ul>
+    <li><strong>Google Firebase</strong> (Google LLC) — authentication, database, file storage, cloud functions and analytics infrastructure.</li>
+    <li><strong>RevenueCat</strong> (RevenueCat, Inc.) — subscription management. Receives your app-user identifier and purchase state from Apple.</li>
+    <li><strong>Apple</strong> — payment processing and, if you use it, Sign in with Apple.</li>
+    <li><strong>Google</strong> — if you use Google Sign-In.</li>
+  </ul>
+  <p>We do not sell or rent personal data, and we do not share it with advertisers or data brokers.</p>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Theme Toggle Functionality
-        function toggleTheme() {
-            const body = document.body;
-            const themeToggle = document.querySelector('.theme-toggle i');
-            
-            if (body.classList.contains('dark-mode')) {
-                body.classList.remove('dark-mode');
-                themeToggle.className = 'fas fa-moon';
-                localStorage.setItem('theme', 'light');
-            } else {
-                body.classList.add('dark-mode');
-                themeToggle.className = 'fas fa-sun';
-                localStorage.setItem('theme', 'dark');
-            }
-        }
+  <h2 id="analytics">4. Analytics</h2>
+  <p>We use Google Analytics for Firebase to understand how the app is used — for example which screens are opened, that workouts are started and completed, and whether onboarding is finished. Analytics data is tied to a random app-instance identifier, not to your name or email. We do not enable the advertising identifier (IDFA), do not use analytics for advertising, and do not track you across other companies' apps or websites.</p>
 
-        // Load saved theme
-        document.addEventListener('DOMContentLoaded', function() {
-            const savedTheme = localStorage.getItem('theme');
-            const themeToggle = document.querySelector('.theme-toggle i');
-            
-            if (savedTheme === 'dark') {
-                document.body.classList.add('dark-mode');
-                themeToggle.className = 'fas fa-sun';
-            }
-        });
+  <h2 id="storage">5. Where data is stored</h2>
+  <p>Your data is stored on Google Cloud infrastructure operated through Firebase, protected in transit by TLS and at rest by Google's encryption. Access to production data is restricted to the developer. A local copy of some data (for example your workout list and settings) is cached on your device to keep the app fast and usable offline.</p>
 
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+  <h2 id="retention">6. Retention and deletion</h2>
+  <ul>
+    <li>Your data is kept for as long as your account exists.</li>
+    <li><strong>Deleting your account</strong> removes your profile and all training data from our servers, revokes the Sign in with Apple token where applicable, and deletes the authentication record. You can do this in the app under <em>Profile → Delete account</em> — see the <a href="DeleteInstructions.html">step-by-step instructions</a>.</li>
+    <li>Abandoned guest accounts are cleaned up, including their data.</li>
+    <li>Feedback emails are kept only as long as needed to handle your request.</li>
+  </ul>
 
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
+  <h2 id="rights">7. Your rights</h2>
+  <p>Depending on where you live (including under the GDPR), you have the right to access, correct, export or delete your personal data, to object to or restrict certain processing, and to lodge a complaint with your data-protection authority. Most of this you can do directly in the app; for anything else, <a href="#contact">contact us</a> and we will respond within 30 days.</p>
 
-        // Observe all elements with fade-in-up class
-        document.querySelectorAll('.fade-in-up').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-            observer.observe(el);
-        });
-    </script>
+  <h2 id="children">8. Children</h2>
+  <p>LiftSmart is not directed at children under 16, and we do not knowingly collect personal data from them. If you believe a child has provided us personal data, contact us and we will delete it.</p>
+
+  <h2 id="changes">9. Changes to this policy</h2>
+  <p>If we change this policy in a meaningful way we will update the date above and, for significant changes, point it out in the app. Continued use of the app after a change means you accept the updated policy.</p>
+
+  <h2 id="contact">10. Contact</h2>
+  <p>LiftSmart is developed by Vaidas Skardžius. For any privacy question or request, email <a href="mailto:bfitappfeedback@gmail.com">bfitappfeedback@gmail.com</a>.</p>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>&copy; 2026 LiftSmart. All rights reserved.</span>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="TermsAndConditions.html">Terms &amp; Conditions</a>
+      <a href="DeleteInstructions.html">Delete Account</a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>

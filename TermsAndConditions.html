@@ -1,539 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms & Conditions - LiftSmart</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        :root {
-            /* Light Mode Colors */
-            --error-state-light: #FF5E52;
-            --primary-button-light: #368DEB;
-            --primary-gradient-light: #D6E6FF;
-            --primary-gradient-secondary-light: #F0F7FE;
-            --primary-text-light: #1F2937;
-            --secondary-button-light: #FFFFFF;
-            --secondary-gradient-light: #E0F7FA;
-            --secondary-gradient-secondary-light: #F1F9FE;
-            --secondary-gradient-complementary-light: #FFFFFF;
-            --secondary-text-light: #4B5563;
-            
-            /* Dark Mode Colors */
-            --error-state-dark: #B12A30;
-            --primary-button-dark: #4A9FFF;
-            --primary-gradient-dark: #1A1A2E;
-            --primary-gradient-secondary-dark: #2F3446;
-            --primary-text-dark: #FFFFFF;
-            --secondary-button-dark: #374151;
-            --secondary-gradient-dark: #004466;
-            --secondary-gradient-secondary-dark: #2B526E;
-            --secondary-gradient-complementary-dark: rgba(255, 255, 255, 0.2);
-            --secondary-text-dark: #D1D5DB;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--primary-text-light);
-            background: linear-gradient(135deg, var(--primary-gradient-light), var(--primary-gradient-secondary-light));
-            transition: all 0.3s ease;
-        }
-
-        body.dark-mode {
-            color: var(--primary-text-dark);
-            background: linear-gradient(135deg, var(--primary-gradient-dark), var(--primary-gradient-secondary-dark));
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        .header {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--primary-button-light);
-            text-decoration: none;
-        }
-
-        .dark-mode .logo {
-            color: var(--primary-button-dark);
-        }
-
-        .theme-toggle {
-            background: var(--secondary-button-light);
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            cursor: pointer;
-            color: var(--primary-text-light);
-            transition: all 0.3s ease;
-        }
-
-        .dark-mode .theme-toggle {
-            background: var(--secondary-button-dark);
-            color: var(--primary-text-dark);
-        }
-
-        .back-button {
-            background: var(--secondary-button-light);
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            cursor: pointer;
-            color: var(--primary-text-light);
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .dark-mode .back-button {
-            background: var(--secondary-button-dark);
-            color: var(--primary-text-dark);
-        }
-
-        .back-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            color: var(--primary-text-light);
-        }
-
-        .dark-mode .back-button:hover {
-            color: var(--primary-text-dark);
-        }
-
-        /* Main Content */
-        .main-content {
-            padding: 120px 0 80px;
-        }
-
-        .content-card {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .dark-mode .content-card {
-            background: rgba(55, 65, 81, 0.9);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .page-title {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--primary-text-light);
-            text-align: center;
-        }
-
-        .dark-mode .page-title {
-            color: var(--primary-text-dark);
-        }
-
-        .last-updated {
-            text-align: center;
-            color: var(--secondary-text-light);
-            margin-bottom: 3rem;
-            font-style: italic;
-        }
-
-        .dark-mode .last-updated {
-            color: var(--secondary-text-dark);
-        }
-
-        .section {
-            margin-bottom: 3rem;
-        }
-
-        .section h2 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary-button-light);
-            border-bottom: 2px solid var(--primary-button-light);
-            padding-bottom: 0.5rem;
-        }
-
-        .dark-mode .section h2 {
-            color: var(--primary-button-dark);
-            border-bottom-color: var(--primary-button-dark);
-        }
-
-        .section h3 {
-            font-size: 1.4rem;
-            margin: 2rem 0 1rem 0;
-            color: var(--primary-text-light);
-        }
-
-        .dark-mode .section h3 {
-            color: var(--primary-text-dark);
-        }
-
-        .section p {
-            margin-bottom: 1rem;
-            color: var(--secondary-text-light);
-        }
-
-        .dark-mode .section p {
-            color: var(--secondary-text-dark);
-        }
-
-        .section ul {
-            margin: 1rem 0;
-            padding-left: 2rem;
-        }
-
-        .section li {
-            margin-bottom: 0.5rem;
-            color: var(--secondary-text-light);
-        }
-
-        .dark-mode .section li {
-            color: var(--secondary-text-dark);
-        }
-
-        .highlight {
-            background: linear-gradient(45deg, var(--primary-button-light), var(--secondary-gradient-light));
-            color: white;
-            padding: 0.2rem 0.5rem;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        .dark-mode .highlight {
-            background: linear-gradient(45deg, var(--primary-button-dark), var(--secondary-gradient-dark));
-        }
-
-        .contact-info {
-            background: var(--secondary-gradient-complementary-light);
-            padding: 2rem;
-            border-radius: 15px;
-            margin: 2rem 0;
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .dark-mode .contact-info {
-            background: var(--secondary-gradient-complementary-dark);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .contact-info h3 {
-            color: var(--primary-button-light);
-            margin-bottom: 1rem;
-        }
-
-        .dark-mode .contact-info h3 {
-            color: var(--primary-button-dark);
-        }
-
-        .contact-info a {
-            color: var(--primary-button-light);
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .dark-mode .contact-info a {
-            color: var(--primary-button-dark);
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--secondary-gradient-light);
-            padding: 2rem 0;
-            text-align: center;
-            color: var(--primary-text-light);
-            margin-top: 3rem;
-        }
-
-        .dark-mode .footer {
-            background: var(--secondary-gradient-dark);
-            color: var(--primary-text-dark);
-        }
-
-        .footer a {
-            color: var(--primary-button-light);
-            text-decoration: none;
-        }
-
-        .dark-mode .footer a {
-            color: var(--primary-button-dark);
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .page-title {
-                font-size: 2rem;
-            }
-            
-            .content-card {
-                padding: 2rem;
-            }
-            
-            .section h2 {
-                font-size: 1.5rem;
-            }
-            
-            .section h3 {
-                font-size: 1.2rem;
-            }
-        }
-
-        /* Animation */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in-up {
-            animation: fadeInUp 0.8s ease-out;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms &amp; Conditions — LiftSmart</title>
+  <meta name="description" content="The terms that govern your use of the LiftSmart app.">
+  <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <a href="index.html" class="logo">LiftSmart</a>
-                <button class="theme-toggle" onclick="toggleTheme()">
-                    <i class="fas fa-moon"></i>
-                </button>
-            </div>
-        </div>
-    </header>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <div class="container">
-            <div class="content-card fade-in-up">
-                <h1 class="page-title">Terms & Conditions</h1>
-                <p class="last-updated">Last updated: January 15, 2024</p>
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6.5 6.5v11M17.5 6.5v11M3 9v6M21 9v6M6.5 12h11"/></svg>
+      </span>
+      LiftSmart
+    </a>
+    <div class="nav-links">
+      <a href="index.html#features">Features</a>
+      <a href="PrivacyPolicy.html">Privacy</a>
+      <a href="TermsAndConditions.html">Terms</a>
+    </div>
+  </div>
+</nav>
 
-                <div class="section fade-in-up">
-                    <h2>1. Introduction</h2>
-                    <p>Welcome to LiftSmart ("we," "our," or "us")! These Terms of Service ("Terms") govern your use of our fitness tracking application and related services (collectively, the "Service").</p>
-                    <p>By accessing or using our Service, you agree to be bound by these Terms. If you disagree with any part of these terms, then you may not access the Service.</p>
-                </div>
+<main class="legal">
+  <h1>Terms &amp; Conditions</h1>
+  <p class="updated">Last updated: 2 August 2026</p>
 
-                <div class="section fade-in-up">
-                    <h2>2. Description of Service</h2>
-                    <p>LiftSmart is a fitness tracking application that helps users:</p>
-                    <ul>
-                        <li>Track workouts, sets, reps, and weights</li>
-                        <li>Monitor fitness progress and goals</li>
-                        <li>Access workout routines and exercises</li>
-                    </ul>
-                </div>
+  <p>These terms are an agreement between you and Vaidas Skardžius ("we", "us"), the developer of the LiftSmart iOS application. By downloading or using LiftSmart you agree to them. If you do not agree, please do not use the app.</p>
 
-                <div class="section fade-in-up">
-                    <h2>3. User Accounts</h2>
-                    <h3>Account Creation</h3>
-                    <p>To use certain features of the Service, you must create an account. You agree to provide accurate, current, and complete information during registration and to update such information to keep it accurate, current, and complete.</p>
-                    
-                    <h3>Account Security</h3>
-                    <p>You are responsible for safeguarding the password and for all activities that occur under your account. You agree to notify us immediately of any unauthorized use of your account.</p>
-                    
-                    <h3>Age Requirements</h3>
-                    <p>You must be at least 13 years old to use the Service. If you are under 18, you must have parental or guardian consent to use the Service.</p>
-                </div>
+  <div class="toc">
+    <strong>Contents</strong>
+    <ul>
+      <li><a href="#license">1. License to use the app</a></li>
+      <li><a href="#accounts">2. Accounts</a></li>
+      <li><a href="#subscriptions">3. Subscriptions and purchases</a></li>
+      <li><a href="#health">4. Health and safety disclaimer</a></li>
+      <li><a href="#content">5. Your content</a></li>
+      <li><a href="#acceptable">6. Acceptable use</a></li>
+      <li><a href="#ip">7. Our content and intellectual property</a></li>
+      <li><a href="#warranty">8. Disclaimer of warranties</a></li>
+      <li><a href="#liability">9. Limitation of liability</a></li>
+      <li><a href="#termination">10. Termination</a></li>
+      <li><a href="#changes">11. Changes to the app or these terms</a></li>
+      <li><a href="#law">12. Governing law</a></li>
+      <li><a href="#contact">13. Contact</a></li>
+    </ul>
+  </div>
 
-                <div class="section fade-in-up">
-                    <h2>4. Acceptable Use</h2>
-                    <p>You agree not to use the Service to:</p>
-                    <ul>
-                        <li>Violate any applicable laws or regulations</li>
-                        <li>Infringe upon the rights of others</li>
-                        <li>Upload or transmit harmful, offensive, or inappropriate content</li>
-                        <li>Attempt to gain unauthorized access to our systems</li>
-                        <li>Interfere with or disrupt the Service</li>
-                        <li>Use the Service for commercial purposes without our permission</li>
-                        <li>Impersonate another person or entity</li>
-                    </ul>
-                </div>
+  <h2 id="license">1. License to use the app</h2>
+  <p>We grant you a personal, non-exclusive, non-transferable, revocable license to use LiftSmart on Apple devices that you own or control, for your own personal, non-commercial fitness training, in accordance with these terms and Apple's App Store terms.</p>
 
-                <div class="section fade-in-up">
-                    <h2>5. Subscription and Payment</h2>
-                    <h3>Free and Premium Features</h3>
-                    <p>LiftSmart offers both free and premium features. Premium features require a paid subscription.</p>
-                    <h3>Subscription Terms</h3>
-                    <ul>
-                        <li>Subscriptions automatically renew unless cancelled</li>
-                        <li>You may cancel your subscription at any time</li>
-                        <li>Refunds are subject to our refund policy</li>
-                        <li>We may change subscription prices with notice</li>
-                    </ul>
-                    <h3>Payment Processing</h3>
-                    <p>Payments are processed by third-party payment processors. You agree to their terms.</p>
-                </div>
+  <h2 id="accounts">2. Accounts</h2>
+  <ul>
+    <li>You can use LiftSmart as a <strong>guest</strong> (an anonymous account stored on our servers) or <strong>register</strong> with Sign in with Apple or Google. Registering preserves your data across devices and reinstalls; a guest account may be unrecoverable if you lose access to the device or delete the app.</li>
+    <li>You are responsible for the activity that happens under your account and for keeping access to your sign-in method secure.</li>
+    <li>You can delete your account at any time in <em>Profile → Delete account</em>; deletion is permanent (see the <a href="DeleteInstructions.html">deletion instructions</a> and our <a href="PrivacyPolicy.html">Privacy Policy</a>).</li>
+  </ul>
 
-                <div class="section fade-in-up">
-                    <h2>6. Privacy and Data</h2>
-                    <p>Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy, which is incorporated into these Terms by reference.</p>
-                    <p>You retain ownership of your personal data, and we process it in accordance with our Privacy Policy and applicable data protection laws.</p>
-                </div>
+  <h2 id="subscriptions">3. Subscriptions and purchases</h2>
+  <ul>
+    <li>Parts of LiftSmart require a paid subscription ("Premium"). Prices, billing periods and any trial terms are shown in the app before you buy.</li>
+    <li>Payment is charged to your Apple ID through the App Store. Subscriptions <strong>renew automatically</strong> unless cancelled at least 24 hours before the end of the current period.</li>
+    <li>You can manage or cancel your subscription anytime in your device's <em>Settings → Apple ID → Subscriptions</em> (or via the manage-subscription option in the app). Cancelling stops future renewals; the current period stays active until it ends.</li>
+    <li>Refunds are handled by Apple under App Store rules — we cannot issue them directly. Request one at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</li>
+    <li>Deleting the app or your account does <strong>not</strong> cancel a subscription — cancel it in your Apple ID settings.</li>
+  </ul>
 
-                <div class="section fade-in-up">
-                    <h2>7. Intellectual Property</h2>
-                    <h3>Our Rights</h3>
-                    <p>The Service and its original content, features, and functionality are owned by LiftSmart and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws.</p>
-                    
-                    <h3>Your Content</h3>
-                    <p>You retain ownership of content you submit to the Service. By submitting content, you grant us a license to use, display, and distribute your content in connection with the Service.</p>
-                </div>
+  <h2 id="health">4. Health and safety disclaimer</h2>
+  <div class="note">
+    <p><strong>LiftSmart is not medical advice.</strong> The workouts, plans, weights, repetitions and progression suggestions in the app are general fitness information generated from your own logged training. They are not a substitute for advice from a physician, physiotherapist or qualified coach.</p>
+  </div>
+  <ul>
+    <li>Consult a doctor before starting any exercise program, especially if you have a medical condition, injury, or have been inactive.</li>
+    <li>Strength training carries inherent risk of injury. You are solely responsible for exercising within your abilities, using proper form and appropriate equipment, and stopping if something feels wrong.</li>
+    <li>Progression suggestions are estimates based on the numbers you log — always apply your own judgment before adding weight.</li>
+  </ul>
 
-                <div class="section fade-in-up">
-                    <h2>8. Disclaimers and Limitations</h2>
-                    <h3>Health and Safety Disclaimer</h3>
-                    <p>The Service is for informational purposes only and is not a substitute for professional medical advice. Consult with healthcare professionals before starting any fitness program.</p>
-                    
-                    <h3>Service Availability</h3>
-                    <p>We strive to maintain the Service's availability but cannot guarantee uninterrupted access. We may modify, suspend, or discontinue the Service at any time.</p>
-                    
-                    <h3>Limitation of Liability</h3>
-                    <p>To the maximum extent permitted by law, LiftSmart shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of the Service.</p>
-                </div>
+  <h2 id="content">5. Your content</h2>
+  <p>Custom exercises, workouts, plans and logs you create remain yours. You grant us the limited license needed to store, process and display that content back to you — that is what makes the app work. We do not publish your content or share it with other users.</p>
 
-                <div class="section fade-in-up">
-                    <h2>9. Termination</h2>
-                    <p>We may terminate or suspend your account and access to the Service immediately, without prior notice, for any reason, including breach of these Terms.</p>
-                    <p>Upon termination, your right to use the Service will cease immediately, and we may delete your account and data in accordance with our Privacy Policy.</p>
-                </div>
+  <h2 id="acceptable">6. Acceptable use</h2>
+  <p>You agree not to misuse the service — including attempting to access other users' data, probing or disrupting our infrastructure, reverse-engineering the app except where the law permits it, using the service to send unlawful or abusive content through feedback, or reselling access to the app or its content catalog.</p>
 
-                <div class="section fade-in-up">
-                    <h2>10. Changes to Terms</h2>
-                    <p>We reserve the right to modify these Terms at any time. We will notify users of material changes by posting the new Terms on this page and updating the "Last updated" date.</p>
-                    <p>Your continued use of the Service after such changes constitutes acceptance of the new Terms.</p>
-                </div>
+  <h2 id="ip">7. Our content and intellectual property</h2>
+  <p>The app, its design, the exercise library including demonstration videos, the workout and plan catalog, and the progression engine are our intellectual property or used under license. Except for the personal-use license above, no rights are granted to copy, extract, scrape or redistribute them.</p>
 
-                <div class="section fade-in-up">
-                    <h2>11. Governing Law</h2>
-                    <p>These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in which LiftSmart operates, without regard to its conflict of law provisions.</p>
-                </div>
+  <h2 id="warranty">8. Disclaimer of warranties</h2>
+  <p>LiftSmart is provided "as is" and "as available", without warranties of any kind, express or implied, including fitness for a particular purpose. We do not warrant that the app will be uninterrupted, error-free, or that data will never be lost — keep this in mind and register an account so your data is recoverable.</p>
 
-                <div class="section fade-in-up">
-                    <h2>12. Dispute Resolution</h2>
-                    <p>Any disputes arising from these Terms or your use of the Service shall be resolved through binding arbitration in accordance with the rules of the relevant arbitration association.</p>
-                </div>
+  <h2 id="liability">9. Limitation of liability</h2>
+  <p>To the maximum extent permitted by law, we are not liable for indirect, incidental, special or consequential damages, loss of data, or personal injury arising from your use of the app (see the health disclaimer above). Our total liability for any claim relating to the app is limited to the amount you paid us through the App Store in the twelve months before the claim. Nothing in these terms limits liability that cannot be limited by law, or your statutory rights as a consumer.</p>
 
-                <div class="section fade-in-up">
-                    <h2>13. Severability</h2>
-                    <p>If any provision of these Terms is held to be invalid or unenforceable, the remaining provisions will continue in full force and effect.</p>
-                </div>
+  <h2 id="termination">10. Termination</h2>
+  <p>You can stop using the app and delete your account at any time. We may suspend or terminate access to the service if you materially breach these terms or where required by law; where reasonable, we will notify you first.</p>
 
-                <div class="contact-info fade-in-up">
-                    <h3>Contact Us</h3>
-                    <p>If you have any questions about these Terms of Service, please contact us:</p>
-                    <p><strong>Email:</strong> <a href="mailto:bfitappfeedback@gmail.com">bfitappfeedback@gmail.com</a></p>
-                </div>
-            </div>
-        </div>
-    </main>
+  <h2 id="changes">11. Changes to the app or these terms</h2>
+  <p>We continuously improve the app and may add, change or remove features, including the content catalog. We may update these terms; the date above always reflects the current version, and significant changes will be pointed out in the app. Continued use after a change means you accept the updated terms.</p>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 LiftSmart. All rights reserved. | 
-                <a href="PrivacyPolicy.html">Privacy Policy</a> | 
-                <a href="DeleteInstructions.html">Delete Instructions</a>
-            </p>
-        </div>
-    </footer>
+  <h2 id="law">12. Governing law</h2>
+  <p>These terms are governed by the laws of the Republic of Lithuania, without affecting any mandatory consumer protections of the country you live in. Disputes will be resolved by the competent courts of Lithuania unless mandatory law provides otherwise.</p>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Theme Toggle Functionality
-        function toggleTheme() {
-            const body = document.body;
-            const themeToggle = document.querySelector('.theme-toggle i');
-            
-            if (body.classList.contains('dark-mode')) {
-                body.classList.remove('dark-mode');
-                themeToggle.className = 'fas fa-moon';
-                localStorage.setItem('theme', 'light');
-            } else {
-                body.classList.add('dark-mode');
-                themeToggle.className = 'fas fa-sun';
-                localStorage.setItem('theme', 'dark');
-            }
-        }
+  <h2 id="contact">13. Contact</h2>
+  <p>Questions about these terms: <a href="mailto:bfitappfeedback@gmail.com">bfitappfeedback@gmail.com</a>.</p>
+</main>
 
-        // Load saved theme
-        document.addEventListener('DOMContentLoaded', function() {
-            const savedTheme = localStorage.getItem('theme');
-            const themeToggle = document.querySelector('.theme-toggle i');
-            
-            if (savedTheme === 'dark') {
-                document.body.classList.add('dark-mode');
-                themeToggle.className = 'fas fa-sun';
-            }
-        });
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>&copy; 2026 LiftSmart. All rights reserved.</span>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="PrivacyPolicy.html">Privacy Policy</a>
+      <a href="DeleteInstructions.html">Delete Account</a>
+    </div>
+  </div>
+</footer>
 
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe all elements with fade-in-up class
-        document.querySelectorAll('.fade-in-up').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-            observer.observe(el);
-        });
-    </script>
 </body>
 </html>

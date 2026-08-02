@@ -1,518 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LiftSmart - Smart Fitness Tracking</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        :root {
-            /* Light Mode Colors */
-            --error-state-light: #FF5E52;
-            --primary-button-light: #368DEB;
-            --primary-gradient-light: #D6E6FF;
-            --primary-gradient-secondary-light: #F0F7FE;
-            --primary-text-light: #1F2937;
-            --secondary-button-light: #FFFFFF;
-            --secondary-gradient-light: #E0F7FA;
-            --secondary-gradient-secondary-light: #F1F9FE;
-            --secondary-gradient-complementary-light: #FFFFFF;
-            --secondary-text-light: #4B5563;
-            
-            /* Dark Mode Colors */
-            --error-state-dark: #B12A30;
-            --primary-button-dark: #4A9FFF;
-            --primary-gradient-dark: #1A1A2E;
-            --primary-gradient-secondary-dark: #2F3446;
-            --primary-text-dark: #FFFFFF;
-            --secondary-button-dark: #374151;
-            --secondary-gradient-dark: #004466;
-            --secondary-gradient-secondary-dark: #2B526E;
-            --secondary-gradient-complementary-dark: rgba(255, 255, 255, 0.2);
-            --secondary-text-dark: #D1D5DB;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--primary-text-light);
-            background: linear-gradient(135deg, var(--primary-gradient-light), var(--primary-gradient-secondary-light));
-            transition: all 0.3s ease;
-        }
-
-        body.dark-mode {
-            color: var(--primary-text-dark);
-            background: linear-gradient(135deg, var(--primary-gradient-dark), var(--primary-gradient-secondary-dark));
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        .header {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--primary-button-light);
-            text-decoration: none;
-        }
-
-        .dark-mode .logo {
-            color: var(--primary-button-dark);
-        }
-
-        .theme-toggle {
-            background: var(--secondary-button-light);
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            cursor: pointer;
-            color: var(--primary-text-light);
-            transition: all 0.3s ease;
-        }
-
-        .dark-mode .theme-toggle {
-            background: var(--secondary-button-dark);
-            color: var(--primary-text-dark);
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 120px 0 80px;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(45deg, var(--primary-button-light), var(--secondary-gradient-light));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .dark-mode .hero h1 {
-            background: linear-gradient(45deg, var(--primary-button-dark), var(--secondary-gradient-dark));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            color: var(--secondary-text-light);
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .dark-mode .hero p {
-            color: var(--secondary-text-dark);
-        }
-
-        .cta-button {
-            background: linear-gradient(45deg, var(--primary-button-light), var(--secondary-gradient-light));
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            margin: 0 10px;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            color: white;
-        }
-
-        .dark-mode .cta-button {
-            background: linear-gradient(45deg, var(--primary-button-dark), var(--secondary-gradient-dark));
-        }
-
-        /* Features Section */
-        .features {
-            padding: 80px 0;
-            background: var(--secondary-gradient-complementary-light);
-        }
-
-        .dark-mode .features {
-            background: var(--secondary-gradient-complementary-dark);
-        }
-
-        .features h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: var(--primary-text-light);
-        }
-
-        .dark-mode .features h2 {
-            color: var(--primary-text-dark);
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .feature-card {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 2rem;
-            border-radius: 20px;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .dark-mode .feature-card {
-            background: rgba(55, 65, 81, 0.9);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .feature-icon {
-            font-size: 3rem;
-            color: var(--primary-button-light);
-            margin-bottom: 1rem;
-        }
-
-        .dark-mode .feature-icon {
-            color: var(--primary-button-dark);
-        }
-
-        .feature-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--primary-text-light);
-        }
-
-        .dark-mode .feature-card h3 {
-            color: var(--primary-text-dark);
-        }
-
-        .feature-card p {
-            color: var(--secondary-text-light);
-        }
-
-        .dark-mode .feature-card p {
-            color: var(--secondary-text-dark);
-        }
-
-        /* Download Section */
-        .download {
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .download h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: var(--primary-text-light);
-        }
-
-        .dark-mode .download h2 {
-            color: var(--primary-text-dark);
-        }
-
-        .download p {
-            font-size: 1.1rem;
-            margin-bottom: 3rem;
-            color: var(--secondary-text-light);
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .dark-mode .download p {
-            color: var(--secondary-text-dark);
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--secondary-gradient-light);
-            padding: 40px 0 20px;
-            color: var(--primary-text-light);
-        }
-
-        .dark-mode .footer {
-            background: var(--secondary-gradient-dark);
-            color: var(--primary-text-dark);
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h3 {
-            margin-bottom: 1rem;
-            color: var(--primary-button-light);
-        }
-
-        .dark-mode .footer-section h3 {
-            color: var(--primary-button-dark);
-        }
-
-        .footer-section a {
-            color: var(--secondary-text-light);
-            text-decoration: none;
-            display: block;
-            margin-bottom: 0.5rem;
-            transition: color 0.3s ease;
-        }
-
-        .dark-mode .footer-section a {
-            color: var(--secondary-text-dark);
-        }
-
-        .footer-section a:hover {
-            color: var(--primary-button-light);
-        }
-
-        .dark-mode .footer-section a:hover {
-            color: var(--primary-button-dark);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            color: var(--secondary-text-light);
-        }
-
-        .dark-mode .footer-bottom {
-            color: var(--secondary-text-dark);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-            }
-            
-            .features h2,
-            .download h2 {
-                font-size: 2rem;
-            }
-            
-            .feature-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Animation */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in-up {
-            animation: fadeInUp 0.8s ease-out;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LiftSmart — Strength training that thinks with you</title>
+  <meta name="description" content="LiftSmart is an iOS strength training app with 500+ ready workouts, multi-week plans and self-adjusting mesocycles that manage your sets, reps and weights week after week.">
+  <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <a href="#" class="logo">LiftSmart</a>
-                <button class="theme-toggle" onclick="toggleTheme()">
-                    <i class="fas fa-moon"></i>
-                </button>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6.5 6.5v11M17.5 6.5v11M3 9v6M21 9v6M6.5 12h11"/></svg>
+      </span>
+      LiftSmart
+    </a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#mesocycles">Mesocycles</a>
+      <a href="PrivacyPolicy.html">Privacy</a>
+      <a href="TermsAndConditions.html">Terms</a>
+      <a class="nav-cta" href="#get">Get the app</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>Strength training that <span class="accent">thinks with you</span></h1>
+      <p class="lede">Pick a plan, log your sets, and let LiftSmart handle the programming — weights, reps and volume adjust week after week based on how your training actually felt.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#get">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.96.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8.79-.16 2.09-.86 3.51-.73 1.35.11 2.5.61 3.29 1.62-3.03 1.86-2.55 5.79.54 6.98-.61 1.57-1.4 3.11-2.42 4.3zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+          Coming to the App Store
+        </a>
+        <a class="btn btn-ghost" href="#features">See what's inside</a>
+      </div>
+      <p class="hero-note">Free to try · Premium unlocks the full catalog</p>
+    </div>
+
+    <div class="phone-wrap">
+      <!-- Stylized recreation of the Workout Plans screen. Swap for a real
+           screenshot by replacing this .phone block with:
+           <img src="assets/img/screen-plans.png" alt="LiftSmart workout plans" style="width:300px;border-radius:44px"> -->
+      <div class="phone" aria-hidden="true">
+        <div class="phone-screen">
+          <div class="ps-status"><span>9:41</span><span>&#9679;&#9679;&#9679;</span></div>
+          <div class="ps-title">Workout Plans</div>
+          <div class="ps-search">&#128269;&nbsp; Search workout plans</div>
+          <div class="ps-card">
+            <div class="ps-card-title">Chest &amp; Triceps Focus · 4-Day</div>
+            <div class="ps-card-sub">4 workouts/week</div>
+            <div class="ps-badges"><span class="ps-badge">Chest</span><span class="ps-badge">Triceps</span><span class="ps-badge">Shoulders</span></div>
+          </div>
+          <div class="ps-card">
+            <div class="ps-card-title">Glutes &amp; Abs Focus · 5-Day</div>
+            <div class="ps-card-sub">5 workouts/week</div>
+            <div class="ps-badges"><span class="ps-badge">Glutes</span><span class="ps-badge">Abs</span><span class="ps-badge">Hamstrings</span></div>
+          </div>
+          <div class="ps-card">
+            <div class="ps-card-title">Full Body Frequency · 3-Day</div>
+            <div class="ps-card-sub">3 workouts/week</div>
+            <div class="ps-badges"><span class="ps-badge">Quads</span><span class="ps-badge">Back</span><span class="ps-badge">Chest</span></div>
+          </div>
+          <div class="ps-card">
+            <div class="ps-card-title">Granite Mass</div>
+            <div class="ps-card-sub">5 workouts/week</div>
+            <div class="ps-badges"><span class="ps-badge">Chest</span><span class="ps-badge">Back</span><span class="ps-badge">Quads</span></div>
+          </div>
+          <div class="ps-tabbar">
+            <div class="ps-tab active">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6.5 6.5v11M17.5 6.5v11M3 9v6M21 9v6M6.5 12h11"/></svg>
+              Training
             </div>
+            <div class="ps-tab">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+              History
+            </div>
+            <div class="ps-tab">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-3.5 4.5-5 8-5s6.5 1.5 8 5"/></svg>
+              Profile
+            </div>
+          </div>
         </div>
-    </header>
+      </div>
+    </div>
+  </div>
+</header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1 class="fade-in-up">Transform Your Fitness Journey</h1>
-            <p class="fade-in-up">LiftSmart is your intelligent fitness companion that helps you track workouts, monitor progress, and achieve your fitness goals with smart analytics and personalized recommendations.</p>
-            <div class="fade-in-up">
-                <!-- Download and Learn More buttons removed -->
+<section class="section" id="features">
+  <div class="container">
+    <div class="section-head">
+      <h2>Everything a serious lifter needs</h2>
+      <p>Built around the training principles of modern hypertrophy coaching — without the spreadsheet.</p>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6.5 6.5v11M17.5 6.5v11M3 9v6M21 9v6M6.5 12h11"/></svg></div>
+        <h3>500+ ready workouts</h3>
+        <p>A full library of curated workouts and 130+ multi-week plans for every split — 2 to 6 days a week, matched to your training frequency.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 17l5-5 4 4 8-8"/><path d="M14 8h6v6"/></svg></div>
+        <h3>Self-adjusting mesocycles</h3>
+        <p>Multi-week training blocks that react to your feedback — sets, reps and loads progress automatically, deloads included.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M13 2L4.5 13.5H11L9.5 22 19 10h-6.5L13 2z"/></svg></div>
+        <h3>Quick workouts</h3>
+        <p>Short on time? Start a standalone session in seconds — pick a template or build your own on the spot.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5l5 2.5-5 2.5v-5z"/></svg></div>
+        <h3>300 exercises with video</h3>
+        <p>Every exercise ships with a looping demonstration clip, muscle mapping and equipment info — no guessing on form.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <h3>History &amp; personal records</h3>
+        <p>Every set is archived. Browse past sessions, track PRs and watch your strength trend over months.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-3.5 4.5-5 8-5s6.5 1.5 8 5"/></svg></div>
+        <h3>Made for you</h3>
+        <p>Onboarding tunes the catalog to your goals, experience and preferences — you see the programs that fit you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="mesocycles">
+  <div class="container split">
+    <div>
+      <h2>The mesocycle engine does the math</h2>
+      <p>A mesocycle is a training block of several weeks. Pick your workouts once — LiftSmart handles the rest:</p>
+      <ul>
+        <li>Week-one calibration learns your working weights</li>
+        <li>Weekly progression targets the right effort for each week</li>
+        <li>Volume adapts to your post-workout feedback</li>
+        <li>A deload week caps the block so you come back stronger</li>
+      </ul>
+    </div>
+    <div class="phone-wrap">
+      <div class="phone" aria-hidden="true">
+        <div class="phone-screen">
+          <div class="ps-status"><span>9:41</span><span>&#9679;&#9679;&#9679;</span></div>
+          <div class="ps-title">Push Day · Week 3</div>
+          <div class="ps-week">
+            <div class="ps-day done">Mon</div>
+            <div class="ps-day done">Tue</div>
+            <div class="ps-day active">Thu</div>
+            <div class="ps-day">Fri</div>
+          </div>
+          <div class="ps-card">
+            <div class="ps-card-title">Barbell bench press</div>
+            <div class="ps-card-sub">3 sets · target 8 reps</div>
+          </div>
+          <div class="ps-row">
+            <span class="set-no">1</span>
+            <div><div class="ps-field-label">Weight (kg)</div><div class="ps-field">82.5</div></div>
+            <div><div class="ps-field-label">Reps</div><div class="ps-field">8</div></div>
+            <div class="ps-check done">&#10003;</div>
+          </div>
+          <div class="ps-row">
+            <span class="set-no">2</span>
+            <div><div class="ps-field-label">Weight (kg)</div><div class="ps-field">82.5</div></div>
+            <div><div class="ps-field-label">Reps</div><div class="ps-field">8</div></div>
+            <div class="ps-check done">&#10003;</div>
+          </div>
+          <div class="ps-row">
+            <span class="set-no">3</span>
+            <div><div class="ps-field-label">Weight (kg)</div><div class="ps-field">82.5</div></div>
+            <div><div class="ps-field-label">Reps</div><div class="ps-field">7</div></div>
+            <div class="ps-check">&nbsp;</div>
+          </div>
+          <div class="ps-card" style="margin-top:8px">
+            <div class="ps-card-title">Dumbbell lateral raise</div>
+            <div class="ps-card-sub">3 sets · target 12 reps</div>
+          </div>
+          <div class="ps-tabbar">
+            <div class="ps-tab active">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6.5 6.5v11M17.5 6.5v11M3 9v6M21 9v6M6.5 12h11"/></svg>
+              Training
             </div>
+            <div class="ps-tab">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+              History
+            </div>
+            <div class="ps-tab">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-3.5 4.5-5 8-5s6.5 1.5 8 5"/></svg>
+              Profile
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <h2 class="fade-in-up">Why Choose LiftSmart?</h2>
-            <div class="feature-grid">
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Up and running in three steps</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <h3>Tell us how you train</h3>
+        <p>A short onboarding captures your goal, experience and schedule — no account hassle, you can start as a guest.</p>
+      </div>
+      <div class="step">
+        <h3>Pick your program</h3>
+        <p>Choose a ready plan or mesocycle that matches your days per week, or build your own from the exercise library.</p>
+      </div>
+      <div class="step">
+        <h3>Lift and log</h3>
+        <p>Follow the prescribed sets, log as you go with rest timers, and let next week take care of itself.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-                <div class="feature-card fade-in-up">
-                    <i class="fas fa-dumbbell feature-icon"></i>
-                    <h3>Workout Tracking</h3>
-                    <p>Log your workouts, sets, and reps with our intuitive interface designed for lifters.</p>
-                </div>
-                <div class="feature-card fade-in-up">
-                    <i class="fas fa-plus-circle feature-icon"></i>
-                    <h3>Creating Personalised Workouts</h3>
-                    <p>Design custom workout programs and exercises tailored to your specific fitness goals and preferences.</p>
-                </div>
-                <div class="feature-card fade-in-up">
-                    <i class="fas fa-chart-line feature-icon"></i>
-                    <h3>Mesocycle Planning</h3>
-                    <p>Advanced training cycles with automatic volume adjustments based on your performance and inputs.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="section" id="get">
+  <div class="container">
+    <div class="cta-band">
+      <h2>Train smarter from your next session</h2>
+      <p>LiftSmart is launching on the App Store. Questions, feedback or early access? We read everything.</p>
+      <a class="btn btn-primary" href="mailto:bfitappfeedback@gmail.com">Contact us</a>
+    </div>
+  </div>
+</section>
 
-    <!-- Download Section -->
-    <section class="download">
-        <div class="container">
-            <h2 class="fade-in-up">Ready to Start Your Journey?</h2>
-            <p class="fade-in-up">Join thousands of users who have transformed their fitness with LiftSmart. Download now and take the first step towards your goals.</p>
-            <div class="fade-in-up">
-                <a href="#" class="cta-button">Download for iOS</a>
-            </div>
-        </div>
-    </section>
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>&copy; 2026 LiftSmart. All rights reserved.</span>
+    <div class="footer-links">
+      <a href="PrivacyPolicy.html">Privacy Policy</a>
+      <a href="TermsAndConditions.html">Terms &amp; Conditions</a>
+      <a href="DeleteInstructions.html">Delete Account</a>
+      <a href="mailto:bfitappfeedback@gmail.com">Contact</a>
+    </div>
+  </div>
+</footer>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>LiftSmart</h3>
-                    <p>Your intelligent fitness companion for tracking workouts, monitoring progress, and achieving your fitness goals.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <a href="PrivacyPolicy.html">Privacy Policy</a>
-                    <a href="TermsAndConditions.html">Terms & Conditions</a>
-                    <a href="DeleteInstructions.html">Delete Instructions</a>
-                </div>
-                <div class="footer-section">
-                    <h3>Support</h3>
-                    <a href="mailto:bfitappfeedback@gmail.com">bfitappfeedback@gmail.com</a>
-                    <a href="https://www.instagram.com/liftsmartapp/"><i class="fab fa-instagram"></i> @liftsmartapp</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 LiftSmart. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Theme Toggle Functionality
-        function toggleTheme() {
-            const body = document.body;
-            const themeToggle = document.querySelector('.theme-toggle i');
-            
-            if (body.classList.contains('dark-mode')) {
-                body.classList.remove('dark-mode');
-                themeToggle.className = 'fas fa-moon';
-                localStorage.setItem('theme', 'light');
-            } else {
-                body.classList.add('dark-mode');
-                themeToggle.className = 'fas fa-sun';
-                localStorage.setItem('theme', 'dark');
-            }
-        }
-
-        // Load saved theme
-        document.addEventListener('DOMContentLoaded', function() {
-            const savedTheme = localStorage.getItem('theme');
-            const themeToggle = document.querySelector('.theme-toggle i');
-            
-            if (savedTheme === 'dark') {
-                document.body.classList.add('dark-mode');
-                themeToggle.className = 'fas fa-sun';
-            }
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe all elements with fade-in-up class
-        document.querySelectorAll('.fade-in-up').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-            observer.observe(el);
-        });
-    </script>
 </body>
 </html>
