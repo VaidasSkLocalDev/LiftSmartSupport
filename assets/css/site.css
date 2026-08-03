@@ -175,6 +175,8 @@ a:hover { text-decoration: underline; }
 }
 .step-col p { color: var(--text-secondary); font-size: 0.93rem; }
 
+.step-grid.plain .step-col h3::before { content: none; }
+
 .phone-sm { width: 100%; max-width: 230px; border-radius: 36px; padding: 8px; margin: 0 auto; }
 .phone-sm .phone-shot { border-radius: 29px; }
 
