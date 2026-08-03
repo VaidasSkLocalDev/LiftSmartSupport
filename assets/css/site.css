@@ -15,6 +15,10 @@
   --navy-2: #2F3446;
   --border: rgba(31, 41, 55, 0.10);
   --card-shadow: 0 12px 40px rgba(31, 41, 55, 0.10);
+  --cta-bg-1: #FFFFFF;
+  --cta-bg-2: #F0F7FE;
+  --cta-text: #1F2937;
+  --cta-muted: #6B7280;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,6 +33,10 @@
     --accent-strong: #77B9FF;
     --border: rgba(255, 255, 255, 0.10);
     --card-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+    --cta-bg-1: #1A1A2E;
+    --cta-bg-2: #2F3446;
+    --cta-text: #FFFFFF;
+    --cta-muted: rgba(255, 255, 255, 0.7);
   }
 }
 
@@ -43,11 +51,15 @@
   --accent-strong: #77B9FF;
   --border: rgba(255, 255, 255, 0.10);
   --card-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  --cta-bg-1: #1A1A2E;
+  --cta-bg-2: #2F3446;
+  --cta-text: #FFFFFF;
+  --cta-muted: rgba(255, 255, 255, 0.7);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; background: var(--bg-1); }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -84,6 +96,13 @@ a:hover { text-decoration: underline; }
 .brand-mark {
   width: 34px; height: 34px; border-radius: 9px; display: block; flex-shrink: 0;
   box-shadow: 0 2px 8px rgba(31, 41, 55, 0.18);
+}
+.brand-mark-dark { display: none; }
+:root[data-theme="dark"] .brand-mark-light { display: none; }
+:root[data-theme="dark"] .brand-mark-dark { display: block; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .brand-mark-light { display: none; }
+  :root:not([data-theme="light"]) .brand-mark-dark { display: block; }
 }
 
 .nav-links { display: flex; gap: 22px; align-items: center; font-size: 0.95rem; }
@@ -276,11 +295,12 @@ a:hover { text-decoration: underline; }
 
 .cta-band {
   text-align: center; border-radius: 24px; padding: 56px 24px;
-  background: linear-gradient(140deg, var(--navy-1), var(--navy-2));
-  color: #fff; box-shadow: var(--card-shadow);
+  background: linear-gradient(140deg, var(--cta-bg-1), var(--cta-bg-2));
+  border: 1px solid var(--border);
+  color: var(--cta-text); box-shadow: var(--card-shadow);
 }
 .cta-band h2 { font-size: clamp(1.6rem, 3.5vw, 2.2rem); }
-.cta-band p { color: rgba(255,255,255,0.7); margin: 12px auto 26px; max-width: 480px; }
+.cta-band p { color: var(--cta-muted); margin: 12px auto 26px; max-width: 480px; }
 
 /* ---------- Footer ---------- */
 
