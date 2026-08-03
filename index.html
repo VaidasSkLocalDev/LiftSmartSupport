@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LiftSmart — Strength training that thinks with you</title>
-  <meta name="description" content="LiftSmart is an iOS strength training app with 500+ ready workouts, multi-week plans and self-adjusting mesocycles that manage your sets, reps and weights week after week.">
+  <title>LiftSmart — Remove the guesswork from strength training</title>
+  <meta name="description" content="LiftSmart plans your strength training for you. Log your sets, give feedback, and the science-based mesocycle engine adjusts your weights, reps and volume week after week.">
   <link rel="icon" type="image/png" href="assets/img/favicon.png" media="(prefers-color-scheme: light)">
   <link rel="icon" type="image/png" href="assets/img/favicon-dark.png" media="(prefers-color-scheme: dark)">
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <link rel="apple-touch-icon" href="assets/img/appicon.png">
-  <link rel="stylesheet" href="assets/css/site.css?v=5">
-  <script src="assets/js/theme.js?v=4"></script>
+  <link rel="stylesheet" href="assets/css/site.css?v=6">
+  <script src="assets/js/theme.js?v=5"></script>
 </head>
 <body>
 
@@ -23,29 +23,29 @@
     </a>
     <div class="nav-links">
       <a href="#features">Features</a>
-      <a href="#mesocycles">Mesocycles</a>
+      <a href="#how">How it works</a>
       <a href="PrivacyPolicy.html">Privacy</a>
       <a href="TermsAndConditions.html">Terms</a>
-      <a class="nav-cta" href="#get">Get the app</a>
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
-        <span class="icon-moon" aria-hidden="true">☾</span>
-        <span class="icon-sun" aria-hidden="true">☀︎</span>
-      </button>
     </div>
   </div>
 </nav>
 
+<button class="theme-toggle theme-toggle-floating" onclick="toggleTheme()" aria-label="Toggle dark mode">
+  <span class="icon-moon" aria-hidden="true">☾</span>
+  <span class="icon-sun" aria-hidden="true">☀︎</span>
+</button>
+
 <header class="hero">
   <div class="container hero-grid">
     <div>
-      <h1>Strength training that <span class="accent">thinks with you</span></h1>
-      <p class="lede">Pick a plan, log your sets, and let LiftSmart handle the programming — weights, reps and volume adjust week after week based on how your training actually felt.</p>
+      <h1>Remove the guesswork. <span class="accent">Train with science.</span></h1>
+      <p class="lede">Log your sets and tell LiftSmart how they felt — the app plans your next session for you. Weights, reps and volume adjust week after week, built on proven hypertrophy programming instead of gym-floor guessing.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#get">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.96.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8.79-.16 2.09-.86 3.51-.73 1.35.11 2.5.61 3.29 1.62-3.03 1.86-2.55 5.79.54 6.98-.61 1.57-1.4 3.11-2.42 4.3zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
           Coming to the App Store
         </a>
-        <a class="btn btn-ghost" href="#features">See what's inside</a>
+        <a class="btn btn-ghost" href="#how">See how it works</a>
       </div>
       <p class="hero-note">Free to try · Premium unlocks the full catalog</p>
     </div>
@@ -59,53 +59,119 @@
   </div>
 </header>
 
-<section class="section" id="features">
-  <div class="container">
-    <div class="section-head">
-      <h2>Everything a serious lifter needs</h2>
-      <p>Built around the training principles of modern hypertrophy coaching — without the spreadsheet.</p>
+<section class="section" id="library">
+  <div class="container split">
+    <div>
+      <h2>An ever-growing exercise library</h2>
+      <p>Every exercise in LiftSmart comes ready to train with — a video demonstration, a worked-muscles map and equipment info. No guessing on form, no searching YouTube mid-set.</p>
+      <ul>
+        <li>300+ exercises today, and the library keeps growing</li>
+        <li>Search and filter by muscle group or equipment</li>
+        <li>Demonstration clip and muscle breakdown on every exercise</li>
+        <li>Missing something? Create your own custom exercises</li>
+      </ul>
     </div>
-    <div class="features">
-      <div class="feature">
-        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6.5 6.5v11M17.5 6.5v11M3 9v6M21 9v6M6.5 12h11"/></svg></div>
-        <h3>500+ ready workouts</h3>
-        <p>A full library of curated workouts and 130+ multi-week plans for every split — 2 to 6 days a week, matched to your training frequency.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 17l5-5 4 4 8-8"/><path d="M14 8h6v6"/></svg></div>
-        <h3>Self-adjusting mesocycles</h3>
-        <p>Multi-week training blocks that react to your feedback — sets, reps and loads progress automatically, deloads included.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M13 2L4.5 13.5H11L9.5 22 19 10h-6.5L13 2z"/></svg></div>
-        <h3>Quick workouts</h3>
-        <p>Short on time? Start a standalone session in seconds — pick a template or build your own on the spot.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5l5 2.5-5 2.5v-5z"/></svg></div>
-        <h3>300 exercises with video</h3>
-        <p>Every exercise ships with a looping demonstration clip, muscle mapping and equipment info — no guessing on form.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
-        <h3>History &amp; personal records</h3>
-        <p>Every set is archived. Browse past sessions, track PRs and watch your strength trend over months.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-3.5 4.5-5 8-5s6.5 1.5 8 5"/></svg></div>
-        <h3>Made for you</h3>
-        <p>Onboarding tunes the catalog to your goals, experience and preferences — you see the programs that fit you.</p>
+    <div class="phone-wrap">
+      <div class="phone">
+        <img class="phone-shot shot-light" src="assets/img/screen-exercises-light.jpg" alt="The LiftSmart exercise library with video thumbnails and muscle tags">
+        <img class="phone-shot shot-dark" src="assets/img/screen-exercises.jpg" alt="The LiftSmart exercise library with video thumbnails and muscle tags">
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="mesocycles">
+<section class="section" id="features">
+  <div class="container">
+    <div class="section-head">
+      <h2>Three ways to train — switch anytime</h2>
+      <p>One Training tab, three modes. Use whichever fits your day, or let the mesocycle engine take over completely.</p>
+    </div>
+    <div class="split">
+      <div class="mode-cards">
+        <div class="feature">
+          <h3>Quick Workout</h3>
+          <p>Zero setup. Pick a ready-made workout or throw exercises together and start lifting in seconds — perfect for drop-in sessions and busy days.</p>
+        </div>
+        <div class="feature">
+          <h3>Workout Plans</h3>
+          <p>Structure, on your terms. Follow a multi-week plan — 130+ ready-made or built by you — with prescribed days and exercises, while <em>you</em> decide when to add weight. You're the coach.</p>
+        </div>
+        <div class="feature highlight">
+          <span class="badge-reco">Recommended</span>
+          <h3>Mesocycle</h3>
+          <p>The full engine. A multi-week training block where the app manages progression <em>for</em> you — it learns your weights, targets the right effort each week, adapts volume to your feedback and schedules the deload. The closest thing to a coach in your pocket.</p>
+        </div>
+      </div>
+      <div class="phone-wrap">
+        <div class="phone">
+          <img class="phone-shot shot-light" src="assets/img/screen-quick-light.jpg" alt="Switching between Quick workout, Workout Plan and Mesocycle modes in LiftSmart">
+          <img class="phone-shot shot-dark" src="assets/img/screen-quick.jpg" alt="Switching between Quick workout, Workout Plan and Mesocycle modes in LiftSmart">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="how">
+  <div class="container">
+    <div class="section-head">
+      <h2>How the mesocycle engine works</h2>
+      <p>Winging it leaves results on the table. Research on structured, periodized programs consistently shows greater strength gains than unstructured lifting — and autoregulating your load from feedback improves on fixed plans further. That's exactly what the engine automates.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <h3>Pick your block</h3>
+        <p>Start from a ready-made mesocycle template or build your own — choose your training days and the workout for each day, once.</p>
+      </div>
+      <div class="step">
+        <h3>Calibrate in week one</h3>
+        <p>Just lift and log. The first week teaches the engine your working weight for every exercise — no 1RM tests, no math.</p>
+      </div>
+      <div class="step">
+        <h3>Train and give feedback</h3>
+        <p>Rate how your sets felt after each workout. Effort targets tighten week by week, exactly like a coached block.</p>
+      </div>
+      <div class="step">
+        <h3>Let it adapt</h3>
+        <p>Next week arrives pre-loaded: weights bumped, reps and set counts adjusted to your feedback, deload scheduled at the end.</p>
+      </div>
+    </div>
+    <div class="stat-chips">
+      <span class="stat-chip">0 spreadsheets</span>
+      <span class="stat-chip">Weekly auto-progression</span>
+      <span class="stat-chip">Feedback-driven volume</span>
+      <span class="stat-chip">Deloads built in</span>
+      <span class="stat-chip">130+ templates</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="catalog">
   <div class="container split">
     <div>
-      <h2>The mesocycle engine does the math</h2>
-      <p>A mesocycle is a training block of several weeks. Pick your workouts once — LiftSmart calibrates your weights in week one, targets the right effort each week, adapts volume to your feedback and caps the block with a deload.</p>
-      <h2 style="margin-top:28px">And every rep is remembered</h2>
+      <h2>A catalog that fits your week</h2>
+      <p>Whether you train twice a week or six times, there's a program shaped for it — and everything is tuned to your goals and preferences from onboarding.</p>
+      <ul>
+        <li>500+ ready workouts and 130+ multi-week plans</li>
+        <li>Every frequency covered — 2 to 6 days per week</li>
+        <li>Filter by training days and focus to find yours fast</li>
+        <li>Or build your own workouts, plans and mesocycles from scratch</li>
+      </ul>
+    </div>
+    <div class="phone-wrap">
+      <div class="phone">
+        <img class="phone-shot shot-light" src="assets/img/screen-plans-light.jpg" alt="The LiftSmart workout plan catalog with weekly frequency and muscle focus">
+        <img class="phone-shot shot-dark" src="assets/img/screen-plans.jpg" alt="The LiftSmart workout plan catalog with weekly frequency and muscle focus">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="history">
+  <div class="container split">
+    <div>
+      <h2>And every rep is remembered</h2>
+      <p>Everything you log builds your history — so progress stops being a feeling and becomes something you can see.</p>
       <ul>
         <li>Weekly summaries — workouts, duration and total weight lifted</li>
         <li>A worked-muscles map of your week</li>
@@ -122,32 +188,10 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <h2>Up and running in three steps</h2>
-    </div>
-    <div class="steps">
-      <div class="step">
-        <h3>Tell us how you train</h3>
-        <p>A short onboarding captures your goal, experience and schedule — no account hassle, you can start as a guest.</p>
-      </div>
-      <div class="step">
-        <h3>Pick your program</h3>
-        <p>Choose a ready plan or mesocycle that matches your days per week, or build your own from the exercise library.</p>
-      </div>
-      <div class="step">
-        <h3>Lift and log</h3>
-        <p>Follow the prescribed sets, log as you go with rest timers, and let next week take care of itself.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="section" id="get">
   <div class="container">
     <div class="cta-band">
-      <h2>Train smarter from your next session</h2>
+      <h2>Delete the guesswork from your next block</h2>
       <p>LiftSmart is launching on the App Store. Questions, feedback or early access? We read everything.</p>
       <a class="btn btn-primary" href="mailto:bfitappfeedback@gmail.com">Contact us</a>
     </div>

@@ -131,6 +131,39 @@ a:hover { text-decoration: underline; }
   :root:not([data-theme="light"]) .theme-toggle .icon-moon { display: none; }
 }
 
+.theme-toggle-floating {
+  position: fixed; right: 18px; bottom: 18px; z-index: 60;
+  width: 46px; height: 46px; font-size: 1.15rem;
+  background: var(--surface);
+  box-shadow: 0 8px 28px rgba(31, 41, 55, 0.22);
+}
+
+/* ---------- Training mode cards ---------- */
+
+.mode-cards { display: grid; gap: 14px; align-content: center; }
+
+.feature.highlight {
+  border: 1.5px solid var(--accent);
+  position: relative;
+  box-shadow: 0 12px 40px rgba(54, 141, 235, 0.18);
+}
+
+.badge-reco {
+  position: absolute; top: -11px; right: 18px;
+  background: var(--accent); color: #fff;
+  font-size: 0.75rem; font-weight: 600;
+  padding: 3px 12px; border-radius: 999px;
+}
+
+.stat-chips {
+  display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 30px;
+}
+
+.stat-chip {
+  border: 1px solid var(--border); background: var(--surface-soft);
+  padding: 8px 16px; border-radius: 999px; font-weight: 600; font-size: 0.9rem;
+}
+
 /* ---------- Hero ---------- */
 
 .hero { padding: 72px 0 40px; }
