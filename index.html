@@ -5,16 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LiftSmart — Strength training that thinks with you</title>
   <meta name="description" content="LiftSmart is an iOS strength training app with 500+ ready workouts, multi-week plans and self-adjusting mesocycles that manage your sets, reps and weights week after week.">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/appicon.png">
   <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/theme.js"></script>
 </head>
 <body>
 
 <nav class="nav">
   <div class="nav-inner">
     <a class="brand" href="index.html">
-      <span class="brand-mark">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6.5 6.5v11M17.5 6.5v11M3 9v6M21 9v6M6.5 12h11"/></svg>
-      </span>
+      <img class="brand-mark" src="assets/img/appicon.png" alt="">
       LiftSmart
     </a>
     <div class="nav-links">
@@ -23,6 +24,10 @@
       <a href="PrivacyPolicy.html">Privacy</a>
       <a href="TermsAndConditions.html">Terms</a>
       <a class="nav-cta" href="#get">Get the app</a>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+        <span class="icon-moon" aria-hidden="true">☾</span>
+        <span class="icon-sun" aria-hidden="true">☀︎</span>
+      </button>
     </div>
   </div>
 </nav>
@@ -54,21 +59,25 @@
           <div class="ps-card">
             <div class="ps-card-title">Chest &amp; Triceps Focus · 4-Day</div>
             <div class="ps-card-sub">4 workouts/week</div>
+            <span class="ps-chevron">&#8250;</span>
             <div class="ps-badges"><span class="ps-badge">Chest</span><span class="ps-badge">Triceps</span><span class="ps-badge">Shoulders</span></div>
           </div>
           <div class="ps-card">
             <div class="ps-card-title">Glutes &amp; Abs Focus · 5-Day</div>
             <div class="ps-card-sub">5 workouts/week</div>
+            <span class="ps-chevron">&#8250;</span>
             <div class="ps-badges"><span class="ps-badge">Glutes</span><span class="ps-badge">Abs</span><span class="ps-badge">Hamstrings</span></div>
           </div>
           <div class="ps-card">
             <div class="ps-card-title">Full Body Frequency · 3-Day</div>
             <div class="ps-card-sub">3 workouts/week</div>
+            <span class="ps-chevron">&#8250;</span>
             <div class="ps-badges"><span class="ps-badge">Quads</span><span class="ps-badge">Back</span><span class="ps-badge">Chest</span></div>
           </div>
           <div class="ps-card">
             <div class="ps-card-title">Granite Mass</div>
             <div class="ps-card-sub">5 workouts/week</div>
+            <span class="ps-chevron">&#8250;</span>
             <div class="ps-badges"><span class="ps-badge">Chest</span><span class="ps-badge">Back</span><span class="ps-badge">Quads</span></div>
           </div>
           <div class="ps-tabbar">

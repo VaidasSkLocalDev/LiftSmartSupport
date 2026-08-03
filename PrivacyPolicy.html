@@ -5,22 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy — LiftSmart</title>
   <meta name="description" content="How LiftSmart collects, uses and protects your data.">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/appicon.png">
   <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/theme.js"></script>
 </head>
 <body>
 
 <nav class="nav">
   <div class="nav-inner">
     <a class="brand" href="index.html">
-      <span class="brand-mark">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6.5 6.5v11M17.5 6.5v11M3 9v6M21 9v6M6.5 12h11"/></svg>
-      </span>
+      <img class="brand-mark" src="assets/img/appicon.png" alt="">
       LiftSmart
     </a>
     <div class="nav-links">
       <a href="index.html#features">Features</a>
       <a href="PrivacyPolicy.html">Privacy</a>
       <a href="TermsAndConditions.html">Terms</a>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+        <span class="icon-moon" aria-hidden="true">☾</span>
+        <span class="icon-sun" aria-hidden="true">☀︎</span>
+      </button>
     </div>
   </div>
 </nav>
@@ -38,12 +43,11 @@
       <li><a href="#use">2. How we use it</a></li>
       <li><a href="#sharing">3. Who we share it with</a></li>
       <li><a href="#analytics">4. Analytics</a></li>
-      <li><a href="#storage">5. Where data is stored</a></li>
-      <li><a href="#retention">6. Retention and deletion</a></li>
-      <li><a href="#rights">7. Your rights</a></li>
-      <li><a href="#children">8. Children</a></li>
-      <li><a href="#changes">9. Changes to this policy</a></li>
-      <li><a href="#contact">10. Contact</a></li>
+      <li><a href="#retention">5. Retention and deletion</a></li>
+      <li><a href="#rights">6. Your rights</a></li>
+      <li><a href="#children">7. Children</a></li>
+      <li><a href="#changes">8. Changes to this policy</a></li>
+      <li><a href="#contact">9. Contact</a></li>
     </ul>
   </div>
 
@@ -96,22 +100,13 @@
   <p>Where the GDPR applies, we rely on the performance of our contract with you (providing the app), your consent (optional data such as gender), and our legitimate interest in improving and securing the service.</p>
 
   <h2 id="sharing">3. Who we share it with</h2>
-  <p>We share data only with the service providers that make the app work, acting on our instructions:</p>
-  <ul>
-    <li><strong>Google Firebase</strong> (Google LLC) — authentication, database, file storage, cloud functions and analytics infrastructure.</li>
-    <li><strong>RevenueCat</strong> (RevenueCat, Inc.) — subscription management. Receives your app-user identifier and purchase state from Apple.</li>
-    <li><strong>Apple</strong> — payment processing and, if you use it, Sign in with Apple.</li>
-    <li><strong>Google</strong> — if you use Google Sign-In.</li>
-  </ul>
+  <p>We share data only with trusted service providers that make the app work on our behalf — providers of sign-in, secure cloud data storage, subscription management and usage analytics. Apple processes all payments, and if you sign in with Apple or Google, those providers handle the authentication. All data is transmitted and stored in encrypted form.</p>
   <p>We do not sell or rent personal data, and we do not share it with advertisers or data brokers.</p>
 
   <h2 id="analytics">4. Analytics</h2>
-  <p>We use Google Analytics for Firebase to understand how the app is used — for example which screens are opened, that workouts are started and completed, and whether onboarding is finished. Analytics data is tied to a random app-instance identifier, not to your name or email. We do not enable the advertising identifier (IDFA), do not use analytics for advertising, and do not track you across other companies' apps or websites.</p>
+  <p>We collect anonymous usage analytics to understand how the app is used — for example which screens are opened, that workouts are started and completed, and whether onboarding is finished. Analytics data is tied to a random app-instance identifier, not to your name or email. We do not use the advertising identifier (IDFA), do not use analytics for advertising, and do not track you across other companies' apps or websites.</p>
 
-  <h2 id="storage">5. Where data is stored</h2>
-  <p>Your data is stored on Google Cloud infrastructure operated through Firebase, protected in transit by TLS and at rest by Google's encryption. Access to production data is restricted to the developer. A local copy of some data (for example your workout list and settings) is cached on your device to keep the app fast and usable offline.</p>
-
-  <h2 id="retention">6. Retention and deletion</h2>
+  <h2 id="retention">5. Retention and deletion</h2>
   <ul>
     <li>Your data is kept for as long as your account exists.</li>
     <li><strong>Deleting your account</strong> removes your profile and all training data from our servers, revokes the Sign in with Apple token where applicable, and deletes the authentication record. You can do this in the app under <em>Profile → Delete account</em> — see the <a href="DeleteInstructions.html">step-by-step instructions</a>.</li>
@@ -119,17 +114,17 @@
     <li>Feedback emails are kept only as long as needed to handle your request.</li>
   </ul>
 
-  <h2 id="rights">7. Your rights</h2>
-  <p>Depending on where you live (including under the GDPR), you have the right to access, correct, export or delete your personal data, to object to or restrict certain processing, and to lodge a complaint with your data-protection authority. Most of this you can do directly in the app; for anything else, <a href="#contact">contact us</a> and we will respond within 30 days.</p>
+  <h2 id="rights">6. Your rights</h2>
+  <p>Depending on where you live, the law may give you rights over your personal data — such as asking what we hold about you or having it deleted. You can view and delete everything yourself directly in the app; for anything else, <a href="#contact">contact us</a> and we will help.</p>
 
-  <h2 id="children">8. Children</h2>
+  <h2 id="children">7. Children</h2>
   <p>LiftSmart is not directed at children under 16, and we do not knowingly collect personal data from them. If you believe a child has provided us personal data, contact us and we will delete it.</p>
 
-  <h2 id="changes">9. Changes to this policy</h2>
+  <h2 id="changes">8. Changes to this policy</h2>
   <p>If we change this policy in a meaningful way we will update the date above and, for significant changes, point it out in the app. Continued use of the app after a change means you accept the updated policy.</p>
 
-  <h2 id="contact">10. Contact</h2>
-  <p>LiftSmart is developed by Vaidas Skardžius. For any privacy question or request, email <a href="mailto:bfitappfeedback@gmail.com">bfitappfeedback@gmail.com</a>.</p>
+  <h2 id="contact">9. Contact</h2>
+  <p>For any privacy question or request, email <a href="mailto:bfitappfeedback@gmail.com">bfitappfeedback@gmail.com</a>.</p>
 </main>
 
 <footer class="footer">
