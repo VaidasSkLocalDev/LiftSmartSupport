@@ -1,0 +1,345 @@
+{
+ "meta": {
+  "index_title": "LiftSmart — Carnet de musculation & programme pour iPhone",
+  "index_description": "LiftSmart, c'est un carnet de musculation et un programme adaptatif en une seule app. Réponds à quelques questions, reçois un programme sur plusieurs semaines pour ton objectif, note chaque série et laisse le plan s'ajuster à tes retours."
+ },
+ "nav": {
+  "features": "Entraînement guidé",
+  "free": "Ce qui est gratuit",
+  "faq": "FAQ",
+  "privacy": "Confidentialité",
+  "terms": "Conditions",
+  "theme": "Basculer le mode sombre",
+  "store_small": "Télécharger dans l'",
+  "store_big": "App Store"
+ },
+ "hero": {
+  "kicker": "Carnet de musculation & programme pour iPhone",
+  "h1_a": "Note chaque série.",
+  "h1_b": "Suis le programme.",
+  "lede": "Réponds à quelques questions et reçois un programme sur plusieurs semaines construit autour de ton objectif. Chaque séance te dit quoi soulever, combien de répétitions viser et à quelle intensité pousser — et tes retours façonnent la semaine suivante.",
+  "cta_ghost": "Comment ça marche",
+  "note": "Gratuit pour commencer · Abonnement Pro pour l'Entraînement guidé",
+  "alt_main": "Accueil de l'Entraînement guidé LiftSmart avec la semaine en cours du programme",
+  "alt_left": "Écran Explorer avec des plans d'entraînement prêts",
+  "alt_right": "Calendrier de l'historique avec les muscles travaillés"
+ },
+ "features_head": {
+  "kicker": "Comment ça marche",
+  "h_a": "Moins de doutes.",
+  "h_b": "Plus de progrès.",
+  "p": "Un programme qui s'adapte à toi, un carnet qui se remplit tout seul pendant que tu t'entraînes, et 300 exercices dont tu peux vraiment apprendre."
+ },
+ "blocks": [
+  {
+   "id": "program",
+   "kicker": "Entraînement guidé",
+   "h_a": "Un programme fait pour toi.",
+   "h_b": "Ajusté chaque semaine.",
+   "shot": "session",
+   "accent": true,
+   "p": "Indique à LiftSmart ton objectif, ton emploi du temps, ton matériel et les muscles que tu veux cibler. Il construit un programme sur plusieurs semaines — ou tu pars d'un des 138 plans prêts à l'emploi.",
+   "bullets": [
+    "Progression hebdomadaire : les objectifs montent à mesure que tu deviens plus fort",
+    "Objectifs d'effort hebdomadaires (RIR) pour savoir jusqu'où pousser",
+    "Tes retours après chaque exercice façonnent la séance de la semaine suivante",
+    "Des deloads planifiés quand tu en as besoin"
+   ],
+   "alt": "Une séance guidée avec séries, répétitions et objectifs d'effort prescrits"
+  },
+  {
+   "id": "explore",
+   "kicker": "Explorer",
+   "h_a": "138 plans. 81 séances.",
+   "h_b": "Filtrés pour toi.",
+   "shot": "plans",
+   "flip": true,
+   "p": "Parcours des plans sur plusieurs semaines et des séances indépendantes par niveau, objectif et matériel. Enregistre ceux que tu aimes dans des dossiers et lance-les n'importe quel jour.",
+   "bullets": [
+    "Des plans sur plusieurs semaines pour le muscle, la force et la perte de gras",
+    "Des séances indépendantes pour les jours sans programme",
+    "Des dossiers pour garder tes favoris en ordre"
+   ],
+   "alt": "Écran Explorer listant des plans d'entraînement avec filtres par niveau et objectif"
+  },
+  {
+   "id": "learn",
+   "kicker": "Maîtrise chaque exercice",
+   "h_a": "300 exercices.",
+   "h_b": "Chacun expliqué.",
+   "shot": "exercise",
+   "p": "Une vidéo de démonstration, la carte des muscles travaillés et le matériel pour chaque mouvement — plus À propos, Exécution et Conseils, pour ne plus jamais chercher entre deux séries.",
+   "bullets": [
+    "Vidéo sur les 300 exercices",
+    "À propos, Exécution et Conseils",
+    "Recherche et filtres par groupe musculaire"
+   ],
+   "alt": "Détails d'un exercice avec vidéo, muscles travaillés et guide pas à pas"
+  },
+  {
+   "id": "log",
+   "kicker": "Ton carnet",
+   "h_a": "Chaque rep, mémorisée.",
+   "h_b": "Gratuit pour toujours.",
+   "shot": "history",
+   "flip": true,
+   "p": "Quoi que tu fasses — une séance guidée, un plan ou une séance rapide — tout atterrit dans un seul historique. Les records personnels sont détectés automatiquement.",
+   "bullets": [
+    "Calendrier de chaque séance avec totaux hebdomadaires",
+    "Volume hebdomadaire par groupe musculaire",
+    "Records personnels à chaque nombre de répétitions",
+    "Minuteurs de repos avec Activités en direct sur l'écran verrouillé"
+   ],
+   "alt": "Calendrier de l'historique avec totaux hebdomadaires et carte des muscles travaillés"
+  }
+ ],
+ "free": {
+  "kicker": "Gratuit vs Pro",
+  "h_a": "Commence gratuitement.",
+  "h_b": "Passe à Pro quand tu veux un programme.",
+  "p": "Le carnet est gratuit pour de bon. LiftSmart Pro débloque l'Entraînement guidé et des séances enregistrées illimitées, au mois ou à l'année.",
+  "cards": [
+   {
+    "t": "Séances rapides",
+    "p": "Choisis des exercices et soulève — sans programme. Minuteurs de repos, saisie des séries et résumé à la fin."
+   },
+   {
+    "t": "Enregistrement & historique illimités",
+    "p": "Chaque série notée est gardée pour de bon : calendrier, historique par exercice, volume par groupe musculaire."
+   },
+   {
+    "t": "Records personnels",
+    "p": "Détectés automatiquement dès que tu en bats un, à chaque nombre de répétitions."
+   },
+   {
+    "t": "300 exercices en vidéo",
+    "p": "Toute la bibliothèque avec ses guides est gratuite, recherche et filtres musculaires compris."
+   },
+   {
+    "t": "Quatre séances enregistrées",
+    "p": "Enregistre jusqu'à quatre séances gratuitement. Pro supprime la limite."
+   },
+   {
+    "t": "LiftSmart Pro",
+    "p": "Entraînement guidé — programmes personnalisés et tous les plans sur plusieurs semaines — plus des séances enregistrées illimitées."
+   }
+  ],
+  "chips": [
+   "English",
+   "Deutsch",
+   "Español",
+   "Français",
+   "日本語",
+   "Português (Brasil)"
+  ]
+ },
+ "faq": {
+  "kicker": "Bonnes questions",
+  "h_a": "Avant de commencer.",
+  "h_b": "Un peu de clarté.",
+  "items": [
+   {
+    "q": "En quoi LiftSmart diffère-t-il d'un tracker de musculation ?",
+    "a": "Un tracker enregistre ce que tu as fait. LiftSmart décide aussi de la suite : il construit le programme, fixe des objectifs hebdomadaires et les ajuste selon tes retours. La partie tracker est incluse et gratuite."
+   },
+   {
+    "q": "Faut-il de l'expérience pour l'utiliser ?",
+    "a": "Non. Le questionnaire demande ton niveau, et les plans débutants commencent léger et progressent graduellement. Chaque exercice a une vidéo et un guide pas à pas."
+   },
+   {
+    "q": "Dois-je suivre un programme ?",
+    "a": "Non. Les séances rapides te laissent choisir des exercices et soulever sans aucun programme, et tout atterrit quand même dans ton historique."
+   },
+   {
+    "q": "Combien coûte Pro, et qu'est-ce qui est gratuit ?",
+    "a": "L'enregistrement, l'historique, les records personnels, la bibliothèque d'exercices et jusqu'à quatre séances enregistrées sont gratuits pour toujours. LiftSmart Pro débloque l'Entraînement guidé et des séances enregistrées illimitées. Les prix s'affichent dans l'app dans ta devise, au mois ou à l'année."
+   },
+   {
+    "q": "Faut-il un compte ?",
+    "a": "Non. Tu peux commencer en tant qu'invité. Se connecter avec Apple ou Google garde tes données en sécurité si tu changes de téléphone ou réinstalles."
+   },
+   {
+    "q": "Quels appareils sont pris en charge ?",
+    "a": "iPhone sous iOS 26 ou plus récent. Les minuteurs de repos s'affichent en Activités en direct sur l'écran verrouillé et dans la Dynamic Island."
+   },
+   {
+    "q": "Mes données sont-elles vendues ou utilisées pour la publicité ?",
+    "a": "Non. Pas de publicité, pas de vente de données, pas de suivi dans d'autres apps. Les détails sont dans la Politique de confidentialité."
+   }
+  ]
+ },
+ "cta": {
+  "kicker": "Ta prochaine séance commence ici",
+  "h_a": "Soulève,",
+  "h_b": "c'est tout.",
+  "p": "Ton objectif. Ton programme. Ton carnet.",
+  "fine": "Pour iPhone · iOS 26 ou plus récent · Gratuit pour commencer, abonnement Pro pour l'Entraînement guidé"
+ },
+ "footer": {
+  "rights": "Tous droits réservés.",
+  "home": "Accueil",
+  "privacy": "Politique de confidentialité",
+  "terms": "Conditions d'utilisation",
+  "delete": "Supprimer le compte",
+  "support": "Assistance"
+ },
+ "legal": {
+  "governs": "Cette traduction est fournie pour ta commodité. En cas de divergence avec la version anglaise, la version anglaise prévaut.",
+  "contents": "Sommaire",
+  "updated_label": "Dernière mise à jour",
+  "terms": {
+   "title": "Conditions d'utilisation",
+   "description": "Les conditions qui régissent ton utilisation de l'app LiftSmart.",
+   "updated": "23 septembre 2026",
+   "intro": "<p>Ces conditions constituent un accord entre toi et le développeur de l'application iOS LiftSmart (« nous »). En téléchargeant ou en utilisant LiftSmart, tu les acceptes. Si tu n'es pas d'accord, merci de ne pas utiliser l'app.</p>",
+   "sections": [
+    {
+     "id": "license",
+     "title": "1. Licence d'utilisation de l'app",
+     "html": "<p>Nous t'accordons une licence personnelle, non exclusive, non transférable et révocable pour utiliser LiftSmart sur les appareils Apple que tu possèdes ou contrôles, pour ton propre entraînement physique personnel et non commercial, conformément à ces conditions et aux conditions de l'App Store d'Apple.</p>"
+    },
+    {
+     "id": "accounts",
+     "title": "2. Comptes",
+     "html": "<ul><li>Tu peux utiliser LiftSmart en tant qu'<strong>invité</strong> (un compte anonyme stocké sur nos serveurs) ou <strong>t'inscrire</strong> avec Se connecter avec Apple ou Google. L'inscription conserve tes données entre appareils et réinstallations ; un compte invité peut être irrécupérable si tu perds l'accès à l'appareil ou supprimes l'app.</li><li>Tu es responsable de l'activité effectuée sous ton compte et de la sécurité de ta méthode de connexion.</li><li>Tu peux supprimer ton compte à tout moment dans <em>Profil → Supprimer le compte</em> ; la suppression est définitive (voir les <a href=\"DeleteInstructions.html\">instructions de suppression</a> et notre <a href=\"PrivacyPolicy.html\">Politique de confidentialité</a>).</li></ul>"
+    },
+    {
+     "id": "subscriptions",
+     "title": "3. Abonnements et achats",
+     "html": "<ul><li>Certaines parties de LiftSmart nécessitent un abonnement payant (« LiftSmart Pro »). Les prix, périodes de facturation et éventuelles conditions d'essai sont affichés dans l'app avant l'achat.</li><li>Le paiement est débité de ton compte Apple via l'App Store. Les abonnements <strong>se renouvellent automatiquement</strong> sauf annulation au moins 24 heures avant la fin de la période en cours.</li><li>Tu peux gérer ou annuler ton abonnement à tout moment dans <em>Réglages → Compte Apple → Abonnements</em> sur ton appareil (ou via l'option de gestion de l'abonnement dans l'app). L'annulation arrête les renouvellements futurs ; la période en cours reste active jusqu'à sa fin.</li><li>Les remboursements sont gérés par Apple selon les règles de l'App Store — nous ne pouvons pas les émettre directement. Fais ta demande sur <a href=\"https://reportaproblem.apple.com\">reportaproblem.apple.com</a>.</li><li>Supprimer l'app ou ton compte <strong>n'annule pas</strong> un abonnement — annule-le dans les réglages de ton compte Apple.</li></ul>"
+    },
+    {
+     "id": "health",
+     "title": "4. Avertissement santé et sécurité",
+     "html": "<div class=\"note\"><p><strong>LiftSmart n'est pas un avis médical.</strong> Les séances, programmes, charges, répétitions et suggestions de progression de l'app sont des informations générales de fitness générées à partir de ton propre entraînement enregistré. Elles ne remplacent pas l'avis d'un médecin, d'un physiothérapeute ou d'un coach qualifié.</p></div><ul><li>Consulte un médecin avant de commencer tout programme d'exercice, surtout si tu as un problème de santé, une blessure ou si tu as été inactif.</li><li>La musculation comporte un risque inhérent de blessure. Tu es seul responsable de t'entraîner dans tes capacités, avec une bonne technique et un matériel adapté, et d'arrêter si quelque chose ne va pas.</li><li>Les suggestions de progression sont des estimations basées sur les chiffres que tu enregistres — fais toujours preuve de jugement avant d'ajouter de la charge.</li></ul>"
+    },
+    {
+     "id": "content",
+     "title": "5. Ton contenu",
+     "html": "<p>Les exercices, séances, programmes et enregistrements personnalisés que tu crées restent les tiens. Tu nous accordes la licence limitée nécessaire pour stocker, traiter et t'afficher ce contenu — c'est ce qui fait fonctionner l'app. Nous ne publions pas ton contenu et ne le partageons pas avec d'autres utilisateurs.</p>"
+    },
+    {
+     "id": "acceptable",
+     "title": "6. Utilisation acceptable",
+     "html": "<p>Tu t'engages à ne pas détourner le service — notamment tenter d'accéder aux données d'autres utilisateurs, sonder ou perturber notre infrastructure, faire de l'ingénierie inverse de l'app sauf lorsque la loi le permet, utiliser le service pour envoyer du contenu illicite ou abusif via les retours, ou revendre l'accès à l'app ou à son catalogue de contenu.</p>"
+    },
+    {
+     "id": "ip",
+     "title": "7. Notre contenu et propriété intellectuelle",
+     "html": "<p>L'app, son design, la bibliothèque d'exercices y compris les vidéos de démonstration, le catalogue de séances et de plans, et le moteur de progression sont notre propriété intellectuelle ou utilisés sous licence. En dehors de la licence d'usage personnel ci-dessus, aucun droit n'est accordé pour les copier, extraire, aspirer ou redistribuer.</p>"
+    },
+    {
+     "id": "warranty",
+     "title": "8. Exclusion de garanties",
+     "html": "<p>LiftSmart est fourni « tel quel » et « selon disponibilité », sans garantie d'aucune sorte, expresse ou implicite, y compris d'adéquation à un usage particulier. Nous ne garantissons pas que l'app sera ininterrompue, sans erreur, ni que les données ne seront jamais perdues — garde-le en tête et inscris-toi pour que tes données soient récupérables.</p>"
+    },
+    {
+     "id": "liability",
+     "title": "9. Limitation de responsabilité",
+     "html": "<p>Dans la mesure maximale permise par la loi, nous ne sommes pas responsables des dommages indirects, accessoires, spéciaux ou consécutifs, de la perte de données ou des blessures corporelles résultant de ton utilisation de l'app (voir l'avertissement santé ci-dessus). Notre responsabilité totale pour toute réclamation liée à l'app est limitée au montant que tu nous as payé via l'App Store dans les douze mois précédant la réclamation. Rien dans ces conditions ne limite une responsabilité qui ne peut être limitée par la loi, ni tes droits légaux de consommateur.</p>"
+    },
+    {
+     "id": "termination",
+     "title": "10. Résiliation",
+     "html": "<p>Tu peux cesser d'utiliser l'app et supprimer ton compte à tout moment. Nous pouvons suspendre ou résilier l'accès au service si tu violes gravement ces conditions ou lorsque la loi l'exige ; lorsque c'est raisonnable, nous te préviendrons d'abord.</p>"
+    },
+    {
+     "id": "changes",
+     "title": "11. Modifications de l'app ou de ces conditions",
+     "html": "<p>Nous améliorons l'app en continu et pouvons ajouter, modifier ou retirer des fonctionnalités, y compris le catalogue de contenu. Nous pouvons mettre à jour ces conditions ; la date ci-dessus reflète toujours la version en vigueur, et les changements importants seront signalés dans l'app. Continuer à utiliser l'app après un changement signifie que tu acceptes les conditions mises à jour.</p>"
+    },
+    {
+     "id": "apple",
+     "title": "12. Conditions de l'App Store d'Apple",
+     "html": "<p>LiftSmart est distribué via l'App Store, et Apple exige que les conditions suivantes fassent partie de cet accord.</p><ul><li><strong>Reconnaissance.</strong> Ces conditions sont conclues entre toi et nous uniquement, pas avec Apple. Nous, et non Apple, sommes seuls responsables de LiftSmart et de son contenu.</li><li><strong>Maintenance et assistance.</strong> Nous sommes seuls responsables de la maintenance et de l'assistance de LiftSmart. Apple n'a aucune obligation de fournir des services de maintenance ou d'assistance.</li><li><strong>Garantie.</strong> Nous sommes seuls responsables de toute garantie produit, expresse ou implicite par la loi, dans la mesure où elle n'a pas été effectivement exclue. Si LiftSmart n'est pas conforme à une garantie applicable, tu peux le notifier à Apple, et Apple te remboursera le prix d'achat de l'app. Dans la mesure maximale permise par la loi, Apple n'a aucune autre obligation de garantie concernant LiftSmart.</li><li><strong>Réclamations produit.</strong> Nous, et non Apple, sommes responsables du traitement de toute réclamation relative à LiftSmart ou à ta possession et utilisation de l'app, y compris les réclamations en responsabilité du fait des produits, toute réclamation selon laquelle l'app ne respecte pas une exigence légale ou réglementaire applicable, et les réclamations découlant de la législation sur la protection des consommateurs, la vie privée ou similaire.</li><li><strong>Réclamations de propriété intellectuelle.</strong> Si un tiers affirme que LiftSmart ou ta possession et utilisation de l'app enfreint ses droits de propriété intellectuelle, nous, et non Apple, sommes seuls responsables de l'enquête, de la défense, du règlement et de la résolution de cette réclamation.</li><li><strong>Conformité légale.</strong> Tu déclares ne pas te trouver dans un pays soumis à un embargo du gouvernement des États-Unis ou désigné par celui-ci comme pays « soutenant le terrorisme », et ne figurer sur aucune liste du gouvernement des États-Unis de parties interdites ou restreintes.</li><li><strong>Tiers bénéficiaire.</strong> Apple et les filiales d'Apple sont tiers bénéficiaires de ces conditions. Dès ton acceptation, Apple a le droit — et est réputé l'avoir accepté — de faire appliquer ces conditions à ton encontre en tant que tiers bénéficiaire.</li></ul>"
+    },
+    {
+     "id": "law",
+     "title": "13. Droit applicable",
+     "html": "<p>Ces conditions sont régies par le droit de la République de Lituanie, sans préjudice des protections impératives des consommateurs du pays où tu résides. Les litiges seront tranchés par les tribunaux compétents de Lituanie, sauf disposition impérative contraire.</p>"
+    },
+    {
+     "id": "contact",
+     "title": "14. Contact",
+     "html": "<p>Questions sur ces conditions : <a href=\"mailto:{{EMAIL}}\">{{EMAIL}}</a>.</p>"
+    }
+   ]
+  },
+  "privacy": {
+   "title": "Politique de confidentialité",
+   "description": "Comment LiftSmart collecte, utilise et protège tes données.",
+   "updated": "23 septembre 2026",
+   "intro": "<p>Cette politique explique quelles données l'app iOS LiftSmart (« LiftSmart », « nous ») collecte, pourquoi nous les collectons et quels choix tu as. En résumé : nous collectons ce qui est nécessaire pour faire tourner ton entraînement, nous ne vendons pas tes données, nous n'affichons pas de publicité, et tu peux tout supprimer à tout moment depuis l'app.</p>",
+   "sections": [
+    {
+     "id": "data",
+     "title": "1. Données collectées",
+     "html": "<h3>Données de compte</h3><ul><li><strong>Comptes inscrits</strong> (Se connecter avec Apple ou Google) : ton adresse e-mail et ton nom d'affichage tels que fournis par le fournisseur de connexion, les horodatages de création du compte et de dernière connexion, et le mode d'authentification du compte.</li><li><strong>Comptes invités</strong> : tu peux utiliser LiftSmart sans t'inscrire. Un compte invité est un identifiant anonyme sans e-mail ni nom associé. Si tu t'inscris plus tard, tes données d'entraînement passent sur le compte inscrit.</li></ul><h3>Données de profil que tu fournis</h3><ul><li>Poids de corps et unité de poids préférée (kg/lb) — utilisés pour enregistrer les exercices au poids du corps et prescrire les charges.</li><li>Genre (facultatif) — utilisé uniquement pour adapter les programmes que l'app te propose.</li><li>Préférences d'entraînement issues de l'onboarding et du questionnaire de programme : objectif, niveau d'expérience, emploi du temps, matériel et muscles ciblés.</li></ul><h3>Données d'entraînement</h3><ul><li>Séances, plans et programmes que tu crées ou démarres, les séries, répétitions, charges et durées que tu enregistres, les retours que tu donnes après les exercices, l'historique des séances et les records personnels qui en découlent.</li><li>Exercices personnalisés que tu crées (nom, groupes musculaires, matériel, lien vidéo facultatif).</li></ul><h3>Données d'achat</h3><ul><li>Statut d'abonnement (si ton compte dispose d'un droit LiftSmart Pro actif). Le paiement lui-même est entièrement traité par Apple — nous ne voyons jamais tes données de paiement.</li></ul><h3>Retours</h3><ul><li>Si tu envoies un retour depuis l'app, nous recevons le message que tu écris et, pour les comptes inscrits, l'e-mail associé à ton compte afin de pouvoir te répondre.</li></ul><h3>Données d'utilisation et de diagnostic</h3><ul><li>Événements d'utilisation anonymes — écrans consultés, fonctionnalités utilisées (par exemple qu'<em>une</em> séance a été terminée et sa durée), version de l'app et modèle d'appareil. Voir <a href=\"#analytics\">Statistiques</a>.</li><li>Rapports de plantage et données de performance (par exemple que l'app a planté, sur quel écran, avec quelle version et quel modèle d'appareil). Ils sont liés à l'identifiant de ton compte pour que nous puissions corriger les problèmes qui te concernent ; ils ne contiennent aucun contenu d'entraînement.</li><li>Une vérification d'intégrité de l'appareil (Apple App Attest) qui confirme que les requêtes proviennent d'une copie authentique de l'app. Elle n'envoie aucune donnée personnelle.</li></ul><div class=\"note\"><p>Nous ne collectons <strong>pas</strong> ta position, tes contacts, tes photos, les données de l'app Santé ni l'identifiant publicitaire (IDFA), et l'app ne contient aucune publicité.</p></div>"
+    },
+    {
+     "id": "use",
+     "title": "2. Utilisation des données",
+     "html": "<ul><li>Pour fournir le service : stocker et synchroniser tes données d'entraînement, construire et ajuster ton programme, afficher ton historique et tes records.</li><li>Pour personnaliser : adapter le catalogue à tes préférences, ton emploi du temps et (si fourni) ton genre.</li><li>Pour gérer les abonnements : vérifier si ton compte a droit à LiftSmart Pro.</li><li>Pour améliorer l'app : comprendre quelles fonctionnalités sont utilisées via des statistiques agrégées, et trouver et corriger les plantages.</li><li>Pour te répondre quand tu nous contactes.</li></ul><p>Lorsque le RGPD s'applique, nous nous fondons sur l'exécution de notre contrat avec toi (fournir l'app), ton consentement (données facultatives comme le genre) et notre intérêt légitime à améliorer et sécuriser le service.</p>"
+    },
+    {
+     "id": "sharing",
+     "title": "3. Partage des données",
+     "html": "<p>Nous partageons des données uniquement avec des prestataires de confiance qui font fonctionner l'app pour notre compte — fournisseurs de connexion, de stockage cloud sécurisé, de gestion des abonnements, de rapports de plantage et de statistiques d'utilisation. Apple traite tous les paiements, et si tu te connectes avec Apple ou Google, ces fournisseurs gèrent l'authentification. Toutes les données sont transmises et stockées sous forme chiffrée.</p><p>Nous ne vendons ni ne louons de données personnelles, et nous ne les partageons pas avec des annonceurs ou des courtiers en données.</p>"
+    },
+    {
+     "id": "analytics",
+     "title": "4. Statistiques",
+     "html": "<p>Nous collectons des statistiques d'utilisation anonymes pour comprendre comment l'app est utilisée — par exemple quels écrans sont ouverts, que des séances sont commencées et terminées, et si l'onboarding est achevé. Les données statistiques sont liées à un identifiant aléatoire d'instance de l'app, pas à ton nom ni à ton e-mail. Nous n'utilisons pas l'identifiant publicitaire (IDFA), n'utilisons pas les statistiques à des fins publicitaires et ne te suivons pas dans les apps ou sites d'autres entreprises.</p>"
+    },
+    {
+     "id": "retention",
+     "title": "5. Conservation et suppression",
+     "html": "<ul><li>Tes données sont conservées tant que ton compte existe.</li><li><strong>Supprimer ton compte</strong> retire ton profil et toutes tes données d'entraînement de nos serveurs, révoque le jeton Se connecter avec Apple le cas échéant et supprime l'enregistrement d'authentification. Tu peux le faire dans l'app sous <em>Profil → Supprimer le compte</em> — voir les <a href=\"DeleteInstructions.html\">instructions pas à pas</a>.</li><li>Les comptes invités abandonnés sont nettoyés, données comprises.</li><li>Les rapports de plantage sont conservés jusqu'à 90 jours. Les e-mails de retour ne sont gardés que le temps nécessaire au traitement de ta demande.</li></ul>"
+    },
+    {
+     "id": "rights",
+     "title": "6. Tes droits",
+     "html": "<p>Selon l'endroit où tu vis, la loi peut te donner des droits sur tes données personnelles — comme demander ce que nous détenons sur toi ou en obtenir la suppression. Tu peux tout consulter et supprimer toi-même directement dans l'app ; pour le reste, <a href=\"#contact\">contacte-nous</a> et nous t'aiderons.</p>"
+    },
+    {
+     "id": "children",
+     "title": "7. Enfants",
+     "html": "<p>LiftSmart ne s'adresse pas aux enfants de moins de 16 ans, et nous ne collectons pas sciemment de données personnelles les concernant. Si tu penses qu'un enfant nous a fourni des données personnelles, contacte-nous et nous les supprimerons.</p>"
+    },
+    {
+     "id": "changes",
+     "title": "8. Modifications de cette politique",
+     "html": "<p>Si nous modifions cette politique de manière significative, nous mettrons à jour la date ci-dessus et, pour les changements importants, le signalerons dans l'app. Continuer à utiliser l'app après un changement signifie que tu acceptes la politique mise à jour.</p>"
+    },
+    {
+     "id": "contact",
+     "title": "9. Contact",
+     "html": "<p>Pour toute question ou demande liée à la confidentialité, écris à <a href=\"mailto:{{EMAIL}}\">{{EMAIL}}</a>.</p>"
+    }
+   ]
+  },
+  "delete": {
+   "title": "Supprimer ton compte",
+   "description": "Comment supprimer définitivement ton compte et tes données LiftSmart.",
+   "updated": "23 septembre 2026",
+   "intro": "<div class=\"note\"><p><strong>La suppression est définitive et irréversible.</strong> Toutes tes données — historique des séances, plans, programmes, records personnels et profil — sont retirées de nos serveurs. Un abonnement actif <em>n'est pas</em> annulé par la suppression du compte ; annule-le dans les réglages d'abonnement de ton compte Apple.</p></div>",
+   "sections": [
+    {
+     "id": "inapp",
+     "title": "Supprimer depuis l'app",
+     "html": "<ul><li>Ouvre LiftSmart et va dans l'onglet <strong>Profil</strong>.</li><li>Fais défiler jusqu'en bas de l'écran de profil.</li><li>Touche <strong>Supprimer le compte</strong> et confirme.</li></ul><p>Cela supprime tes données d'entraînement, ton profil et l'enregistrement d'authentification, et pour les comptes Se connecter avec Apple, révoque aussi le jeton de connexion Apple.</p>"
+    },
+    {
+     "id": "noaccess",
+     "title": "Tu n'as plus accès à l'app ?",
+     "html": "<p>Si tu n'as plus l'app ou ne peux pas te connecter, écris-nous à <a href=\"mailto:{{EMAIL}}\">{{EMAIL}}</a> depuis l'adresse liée à ton compte et nous le supprimerons pour toi sous 30 jours.</p>"
+    },
+    {
+     "id": "guest",
+     "title": "Et les comptes invités ?",
+     "html": "<p>Les comptes invités suivent le même chemin de suppression dans l'app. Si un compte invité est abandonné (par exemple après le passage à un compte inscrit), il est nettoyé automatiquement avec ses données.</p>"
+    }
+   ]
+  }
+ }
+}
