@@ -1,0 +1,346 @@
+{
+ "meta": {
+  "index_title": "LiftSmart: treniruočių žurnalas ir programa iPhone telefonui",
+  "index_description": "LiftSmart yra treniruočių žurnalas ir prie tavęs prisitaikanti programa viename. Atsakyk į kelis klausimus, gauk kelių savaičių programą pagal savo tikslą, registruok kiekvieną seriją, o planas prisitaikys pagal tavo atsiliepimus."
+ },
+ "nav": {
+  "features": "Treniruotė su patarimais",
+  "free": "Kas nemokama",
+  "faq": "DUK",
+  "privacy": "Privatumas",
+  "terms": "Sąlygos",
+  "theme": "Perjungti tamsų režimą",
+  "store_small": "Atsisiųsk iš",
+  "store_big": "App Store"
+ },
+ "hero": {
+  "kicker": "Treniruočių žurnalas ir programa iPhone telefonui",
+  "h1_a": "Registruok kiekvieną seriją.",
+  "h1_b": "Laikykis plano.",
+  "lede": "Atsakyk į kelis klausimus ir gauk kelių savaičių programą pagal savo tikslą. Kiekviena treniruotė pasako, kokį svorį kelti, kiek pakartojimų siekti ir kaip stipriai stengtis, o tavo atsiliepimai formuoja kitą savaitę.",
+  "cta_ghost": "Kaip tai veikia",
+  "note": "Pradžia nemokama · Treniruotėms su patarimais reikia Pro prenumeratos",
+  "alt_main": "LiftSmart treniruotės su patarimais ekranas su dabartine programos savaite",
+  "alt_left": "Naršymo ekranas su paruoštais treniruočių planais",
+  "alt_right": "Treniruočių istorijos kalendorius su treniruotais raumenimis"
+ },
+ "features_head": {
+  "kicker": "Kaip tai veikia",
+  "h_a": "Mažiau spėliojimų.",
+  "h_b": "Daugiau pažangos.",
+  "p": "Prie tavęs prisitaikanti programa, žurnalas, kuris pildosi treniruotės metu, ir 300 pratimų, iš kurių tikrai gali mokytis."
+ },
+ "blocks": [
+  {
+   "id": "program",
+   "kicker": "Treniruotė su patarimais",
+   "h_a": "Programa, sukurta tau.",
+   "h_b": "Koreguojama kiekvieną savaitę.",
+   "shot": "session",
+   "accent": true,
+   "p": "Pasakyk LiftSmart savo tikslą, grafiką, įrangą ir raumenis, kuriems nori skirti daugiau dėmesio. Programėlė sukurs kelių savaičių programą, arba gali rinktis vieną iš 138 paruoštų planų.",
+   "bullets": [
+    "Savaitinė progresija: tikslai auga kartu su tavo jėga",
+    "Savaitiniai pastangų (RIR) tikslai, kad žinotum, kaip stipriai stengtis",
+    "Atsiliepimas po kiekvieno pratimo formuoja kitos savaitės treniruotę",
+    "Deload savaitės suplanuojamos tada, kai jų reikia"
+   ],
+   "alt": "Treniruotė su patarimais su nurodytomis serijomis, pakartojimais ir pastangų tikslais"
+  },
+  {
+   "id": "explore",
+   "kicker": "Naršyti",
+   "h_a": "138 planai. 81 treniruotė.",
+   "h_b": "Atrinkta pagal tave.",
+   "shot": "plans",
+   "flip": true,
+   "p": "Naršyk kelių savaičių planus ir atskiras treniruotes pagal lygį, tikslą ir įrangą. Patikusias išsaugok aplankuose ir pradėk bet kurią dieną.",
+   "bullets": [
+    "Kelių savaičių planai raumenims, jėgai ir svoriui mesti",
+    "Atskiros treniruotės dienoms be programos",
+    "Aplankai, kad mėgstamos treniruotės būtų tvarkingai po ranka"
+   ],
+   "alt": "Naršymo ekranas su treniruočių planais ir lygio bei tikslo filtrais"
+  },
+  {
+   "id": "learn",
+   "kicker": "Išmok kiekvieną pratimą",
+   "h_a": "300 pratimų.",
+   "h_b": "Kiekvienas paaiškintas.",
+   "shot": "exercise",
+   "p": "Kiekvienam judesiui yra vaizdo įrašas, treniruojamų raumenų žemėlapis ir įranga, o taip pat aprašymas, atlikimo žingsniai ir patarimai, kad serijos metu nieko nereikėtų ieškoti.",
+   "bullets": [
+    "Vaizdo įrašai visiems 300 pratimų",
+    "Aprašymas, atlikimo žingsniai ir patarimai",
+    "Paieška ir filtrai pagal raumenų grupę"
+   ],
+   "alt": "Pratimo informacija su vaizdo įrašu, treniruojamais raumenimis ir atlikimo žingsniais"
+  },
+  {
+   "id": "log",
+   "kicker": "Tavo žurnalas",
+   "h_a": "Kiekvienas pakartojimas išsaugotas.",
+   "h_b": "Nemokamai visam laikui.",
+   "shot": "history",
+   "flip": true,
+   "p": "Kad ir kaip treniruotumeisi, treniruotė su patarimais, planas ar greita treniruotė patenka į vieną istoriją. Asmeniniai rekordai aptinkami automatiškai.",
+   "bullets": [
+    "Visų treniruočių kalendorius su savaitės suvestinėmis",
+    "Savaitės pakeltas svoris pagal raumenų grupes",
+    "Asmeniniai rekordai kiekvienam pakartojimų skaičiui",
+    "Poilsio laikmačiai su Live Activities užrakinimo ekrane"
+   ],
+   "alt": "Istorijos kalendorius su savaitės suvestinėmis ir treniruotų raumenų žemėlapiu"
+  }
+ ],
+ "free": {
+  "kicker": "Nemokama ir Pro",
+  "h_a": "Pradėk nemokamai.",
+  "h_b": "Rinkis Pro, kai norėsi programos.",
+  "p": "Žurnalas lieka nemokamas visam laikui. LiftSmart Pro atveria treniruotes su patarimais ir neribotą išsaugotų treniruočių skaičių.",
+  "cards": [
+   {
+    "t": "Greitos treniruotės",
+    "p": "Pasirink pratimus ir pradėk, programos nereikia. Poilsio laikmačiai, serijų registravimas ir suvestinė pabaigoje."
+   },
+   {
+    "t": "Neribotas registravimas ir istorija",
+    "p": "Kiekviena užregistruota serija lieka visam laikui: kalendorius, kiekvieno pratimo istorija, pakeltas svoris pagal raumenų grupes."
+   },
+   {
+    "t": "Asmeniniai rekordai",
+    "p": "Aptinkami automatiškai tą akimirką, kai rekordą pagerini, prie bet kokio pakartojimų skaičiaus."
+   },
+   {
+    "t": "300 pratimų su vaizdo įrašais",
+    "p": "Visa biblioteka su patarimais yra nemokama, kartu su paieška ir raumenų filtrais."
+   },
+   {
+    "t": "Keturios išsaugotos treniruotės",
+    "p": "Nemokamai gali išsaugoti iki keturių treniruočių. Su Pro šios ribos nėra."
+   },
+   {
+    "t": "LiftSmart Pro",
+    "p": "Treniruotės su patarimais: asmeninės programos ir visi kelių savaičių planai, o taip pat neribotas išsaugotų treniruočių skaičius."
+   }
+  ],
+  "chips": [
+   "English",
+   "Deutsch",
+   "Español",
+   "Français",
+   "日本語",
+   "Lietuvių",
+   "Português (Brasil)"
+  ]
+ },
+ "faq": {
+  "kicker": "Geri klausimai",
+  "h_a": "Prieš pradedant.",
+  "h_b": "Šiek tiek aiškumo.",
+  "items": [
+   {
+    "q": "Kuo LiftSmart skiriasi nuo įprasto treniruočių žurnalo?",
+    "a": "Žurnalas užrašo, ką padarei. LiftSmart dar ir nusprendžia, ką daryti toliau: sukuria programą, nustato savaitės tikslus ir koreguoja juos pagal tavo atsiliepimus. Žurnalas taip pat yra programėlėje ir yra nemokamas."
+   },
+   {
+    "q": "Ar reikia patirties?",
+    "a": "Ne. Klausimyne pasirenki savo lygį, o pradedančiųjų planai prasideda lengvai ir sunkėja palaipsniui. Kiekvienas pratimas turi vaizdo įrašą ir atlikimo žingsnius."
+   },
+   {
+    "q": "Ar privaloma laikytis programos?",
+    "a": "Ne. Su greitomis treniruotėmis gali pasirinkti pratimus ir treniruotis visai be programos, o viskas vis tiek patenka į tavo istoriją."
+   },
+   {
+    "q": "Kiek kainuoja Pro ir kas yra nemokama?",
+    "a": "Registravimas, istorija, asmeniniai rekordai, pratimų biblioteka ir iki keturių išsaugotų treniruočių yra nemokami visam laikui. LiftSmart Pro atveria treniruotes su patarimais ir neribotą išsaugotų treniruočių skaičių. Kainos rodomos programėlėje tavo valiuta."
+   },
+   {
+    "q": "Ar reikia paskyros?",
+    "a": "Ne. Gali pradėti kaip svečias. Prisijungimas per Apple arba Google apsaugo tavo duomenis, jei pakeistum telefoną ar iš naujo įdiegtum programėlę."
+   },
+   {
+    "q": "Kokie įrenginiai palaikomi?",
+    "a": "iPhone su iOS 26 ar naujesne versija. Poilsio laikmačiai rodomi kaip Live Activities užrakinimo ekrane ir Dynamic Island."
+   },
+   {
+    "q": "Ar mano duomenys parduodami ar naudojami reklamai?",
+    "a": "Ne. Nėra jokių reklamų, duomenų pardavimo ar sekimo kitose programėlėse. Daugiau informacijos rasi Privatumo politikoje."
+   }
+  ]
+ },
+ "cta": {
+  "kicker": "Kita treniruotė prasideda čia",
+  "h_a": "Tiesiog",
+  "h_b": "kelk.",
+  "p": "Tavo tikslas. Tavo programa. Tavo žurnalas.",
+  "fine": "Sukurta iPhone · iOS 26 ar naujesnė · Pradžia nemokama, treniruotėms su patarimais reikia Pro prenumeratos"
+ },
+ "footer": {
+  "rights": "Visos teisės saugomos.",
+  "home": "Pradžia",
+  "privacy": "Privatumo politika",
+  "terms": "Naudojimo sąlygos",
+  "delete": "Ištrinti paskyrą",
+  "support": "Pagalba"
+ },
+ "legal": {
+  "governs": "Šis vertimas pateikiamas tavo patogumui. Jei jis skiriasi nuo angliškos versijos, galioja angliška versija.",
+  "contents": "Turinys",
+  "updated_label": "Paskutinį kartą atnaujinta",
+  "terms": {
+   "title": "Naudojimo sąlygos",
+   "description": "Sąlygos, taikomos naudojantis LiftSmart programėle.",
+   "updated": "2026 m. rugsėjo 23 d.",
+   "intro": "<p>Šios sąlygos yra susitarimas tarp tavęs ir LiftSmart iOS programėlės kūrėjo („mes“). Atsisiuntus arba pradėjus naudoti LiftSmart laikoma, kad su jomis sutinki. Jei nesutinki, prašome programėlės nenaudoti.</p>",
+   "sections": [
+    {
+     "id": "license",
+     "title": "1. Licencija naudoti programėlę",
+     "html": "<p>Suteikiame tau asmeninę, neišimtinę, neperduodamą ir atšaukiamą licenciją naudoti LiftSmart tau priklausančiuose arba tavo valdomuose Apple įrenginiuose, savo asmeninėms, nekomercinėms treniruotėms, laikantis šių sąlygų ir Apple App Store sąlygų.</p>"
+    },
+    {
+     "id": "accounts",
+     "title": "2. Paskyros",
+     "html": "<ul><li>LiftSmart gali naudoti kaip <strong>svečias</strong> (anoniminė paskyra, saugoma mūsų serveriuose) arba <strong>užsiregistruoti</strong> per Sign in with Apple ar Google. Registracija išsaugo tavo duomenis keičiant įrenginius ir iš naujo įdiegiant programėlę; svečio paskyros gali nepavykti atkurti, jei prarasi prieigą prie įrenginio arba ištrinsi programėlę.</li><li>Tu atsakai už veiksmus, atliekamus tavo paskyroje, ir už savo prisijungimo būdo saugumą.</li><li>Paskyrą gali bet kada ištrinti skiltyje <em>Profilis → Ištrinti paskyrą</em>; ištrynimas yra galutinis (žr. <a href=\"DeleteInstructions.html\">ištrynimo instrukcijas</a> ir mūsų <a href=\"PrivacyPolicy.html\">Privatumo politiką</a>).</li></ul>"
+    },
+    {
+     "id": "subscriptions",
+     "title": "3. Prenumeratos ir pirkimai",
+     "html": "<ul><li>Dalis LiftSmart funkcijų reikalauja mokamos prenumeratos („LiftSmart Pro“). Kainos, atsiskaitymo laikotarpiai ir bandymo sąlygos rodomi programėlėje prieš perkant.</li><li>Mokestis nuskaičiuojamas iš tavo Apple Account per App Store. Prenumeratos <strong>atnaujinamos automatiškai</strong>, nebent jas atšauksi likus bent 24 valandoms iki dabartinio laikotarpio pabaigos.</li><li>Prenumeratą gali bet kada tvarkyti arba atšaukti įrenginio skiltyje <em>Nustatymai (Settings) → Apple Account → Prenumeratos (Subscriptions)</em> arba per prenumeratos tvarkymo parinktį programėlėje. Atšaukus nebebus vėlesnių atnaujinimų; dabartinis laikotarpis galioja iki pabaigos.</li><li>Pinigų grąžinimą tvarko Apple pagal App Store taisykles, patys jų grąžinti negalime. Prašymą gali pateikti adresu <a href=\"https://reportaproblem.apple.com\">reportaproblem.apple.com</a>.</li><li>Ištrynus programėlę ar paskyrą prenumerata <strong>nėra</strong> atšaukiama: atšaukti ją reikia savo Apple Account nustatymuose.</li></ul>"
+    },
+    {
+     "id": "health",
+     "title": "4. Sveikatos ir saugumo įspėjimas",
+     "html": "<div class=\"note\"><p><strong>LiftSmart nėra medicininė konsultacija.</strong> Programėlėje pateikiamos treniruotės, programos, svoriai, pakartojimai ir progresijos pasiūlymai yra bendra sporto informacija, sukurta pagal tavo užregistruotas treniruotes. Jie nepakeičia gydytojo, kineziterapeuto ar kvalifikuoto trenerio patarimo.</p></div><ul><li>Prieš pradedant bet kokią treniruočių programą pasitark su gydytoju, ypač jei turi sveikatos sutrikimų, traumų arba ilgai nesportavai.</li><li>Jėgos treniruotės visada susijusios su traumos rizika. Tik tu atsakai už tai, kad treniruotumeisi pagal savo galimybes, taisyklinga technika ir su tinkama įranga, ir sustotum, jei kažkas negerai.</li><li>Progresijos pasiūlymai yra įverčiai pagal tavo registruojamus skaičius: prieš didinant svorį visada įvertink situaciją.</li></ul>"
+    },
+    {
+     "id": "content",
+     "title": "5. Tavo turinys",
+     "html": "<p>Tavo sukurti pratimai, treniruotės, programos ir įrašai lieka tavo. Suteiki mums ribotą licenciją saugoti, apdoroti ir tau rodyti šį turinį: taip veikia programėlė. Neskelbiame tavo turinio ir nesidaliname juo su kitais naudotojais.</p>"
+    },
+    {
+     "id": "acceptable",
+     "title": "6. Leistinas naudojimas",
+     "html": "<p>Sutinki nepiktnaudžiauti paslauga, įskaitant bandymus pasiekti kitų naudotojų duomenis, mūsų infrastruktūros tikrinimą ar trikdymą, programėlės dekompiliavimą, išskyrus kai tai leidžia įstatymai, neteisėto ar įžeidžiančio turinio siuntimą per atsiliepimus, ar prieigos prie programėlės arba jos turinio katalogo perpardavimą.</p>"
+    },
+    {
+     "id": "ip",
+     "title": "7. Mūsų turinys ir intelektinė nuosavybė",
+     "html": "<p>Programėlė, jos dizainas, pratimų biblioteka su vaizdo įrašais, treniruočių ir planų katalogas bei progresijos variklis yra mūsų intelektinė nuosavybė arba naudojami pagal licenciją. Išskyrus aukščiau nurodytą asmeninio naudojimo licenciją, nesuteikiama jokių teisių juos kopijuoti, išgauti, automatiškai rinkti ar platinti.</p>"
+    },
+    {
+     "id": "warranty",
+     "title": "8. Garantijų atsisakymas",
+     "html": "<p>LiftSmart teikiama tokia, „kokia yra“ ir „kaip prieinama“, be jokių aiškiai išreikštų ar numanomų garantijų, įskaitant tinkamumą konkrečiam tikslui. Negarantuojame, kad programėlė veiks nepertraukiamai ir be klaidų arba kad duomenys niekada nebus prarasti: atsižvelk į tai ir užregistruok paskyrą, kad duomenis būtų galima atkurti.</p>"
+    },
+    {
+     "id": "liability",
+     "title": "9. Atsakomybės apribojimas",
+     "html": "<p>Kiek leidžia įstatymai, neatsakome už netiesioginę, atsitiktinę, specialią ar pasekminę žalą, duomenų praradimą ar kūno sužalojimą, kylančius naudojantis programėle (žr. aukščiau pateiktą sveikatos įspėjimą). Mūsų bendra atsakomybė už bet kokį su programėle susijusį reikalavimą neviršija sumos, kurią sumokėjai mums per App Store per dvylika mėnesių iki reikalavimo pateikimo. Niekas šiose sąlygose neriboja atsakomybės, kurios pagal įstatymus riboti negalima, ir tavo, kaip vartotojo, teisių.</p>"
+    },
+    {
+     "id": "termination",
+     "title": "10. Nutraukimas",
+     "html": "<p>Gali bet kada nustoti naudoti programėlę ir ištrinti paskyrą. Galime sustabdyti arba nutraukti prieigą prie paslaugos, jei iš esmės pažeidi šias sąlygas arba to reikalauja įstatymai; kai įmanoma, apie tai pranešime iš anksto.</p>"
+    },
+    {
+     "id": "changes",
+     "title": "11. Programėlės ar šių sąlygų pakeitimai",
+     "html": "<p>Nuolat tobuliname programėlę ir galime pridėti, keisti ar pašalinti funkcijas, įskaitant turinio katalogą. Galime atnaujinti šias sąlygas; aukščiau nurodyta data visada rodo dabartinę versiją, o apie svarbius pakeitimus pranešime programėlėje. Toliau naudojantis programėle po pakeitimo laikoma, kad sutinki su atnaujintomis sąlygomis.</p>"
+    },
+    {
+     "id": "apple",
+     "title": "12. Apple App Store sąlygos",
+     "html": "<p>LiftSmart platinama per App Store, ir Apple reikalauja, kad šios sąlygos būtų šio susitarimo dalis.</p><ul><li><strong>Pripažinimas.</strong> Šios sąlygos sudarytos tik tarp tavęs ir mūsų, ne su Apple. Už LiftSmart ir jos turinį atsakome tik mes, o ne Apple.</li><li><strong>Priežiūra ir pagalba.</strong> Tik mes atsakome už LiftSmart priežiūrą ir pagalbą. Apple neprivalo teikti jokių priežiūros ar pagalbos paslaugų.</li><li><strong>Garantija.</strong> Tik mes atsakome už visas produkto garantijas, aiškiai išreikštas ar numatytas įstatymų, kiek jos nebuvo veiksmingai atsisakytos. Jei LiftSmart neatitinka taikomos garantijos, gali apie tai pranešti Apple, ir Apple grąžins tau programėlės kainą. Kiek leidžia įstatymai, Apple neturi jokių kitų garantinių įsipareigojimų dėl LiftSmart.</li><li><strong>Pretenzijos dėl produkto.</strong> Už pretenzijas, susijusias su LiftSmart ar jos turėjimu ir naudojimu, atsakome mes, o ne Apple, įskaitant pretenzijas dėl atsakomybės už produktą, dėl programėlės neatitikimo teisės aktų reikalavimams ir pretenzijas pagal vartotojų apsaugos, privatumo ar panašius teisės aktus.</li><li><strong>Pretenzijos dėl intelektinės nuosavybės.</strong> Jei trečioji šalis teigia, kad LiftSmart ar jos turėjimas ir naudojimas pažeidžia jos intelektinės nuosavybės teises, už tokios pretenzijos tyrimą, gynybą, sureguliavimą ir išsprendimą atsakome tik mes, o ne Apple.</li><li><strong>Teisės aktų laikymasis.</strong> Patvirtini, kad nesi šalyje, kuriai taikomas JAV Vyriausybės embargas arba kurią JAV Vyriausybė yra paskelbusi „terorizmą remiančia“ šalimi, ir kad tavęs nėra jokiame JAV Vyriausybės draudžiamų ar ribojamų šalių sąraše.</li><li><strong>Trečioji šalis naudos gavėja.</strong> Apple ir jos dukterinės bendrovės yra šių sąlygų trečiosios šalys naudos gavėjos. Tau jas priėmus, Apple turi teisę, ir laikoma, kad šią teisę priėmė, reikalauti šių sąlygų vykdymo iš tavęs kaip trečioji šalis naudos gavėja.</li></ul>"
+    },
+    {
+     "id": "law",
+     "title": "13. Taikytina teisė",
+     "html": "<p>Šioms sąlygoms taikoma Lietuvos Respublikos teisė, nedarant poveikio privalomoms šalies, kurioje gyveni, vartotojų apsaugos nuostatoms. Ginčus sprendžia kompetentingi Lietuvos teismai, nebent privalomos teisės normos numato kitaip.</p>"
+    },
+    {
+     "id": "contact",
+     "title": "14. Kontaktai",
+     "html": "<p>Klausimai dėl šių sąlygų: <a href=\"mailto:{{EMAIL}}\">{{EMAIL}}</a>.</p>"
+    }
+   ]
+  },
+  "privacy": {
+   "title": "Privatumo politika",
+   "description": "Kaip LiftSmart renka, naudoja ir saugo tavo duomenis.",
+   "updated": "2026 m. spalio 16 d.",
+   "intro": "<p>Ši politika paaiškina, kokius duomenis renka LiftSmart iOS programėlė („LiftSmart“, „mes“), kodėl juos renkame ir kokias galimybes turi tu. Trumpai: renkame tai, ko reikia tavo treniruotėms, neparduodame tavo duomenų, nerodome reklamų, ir gali viską bet kada ištrinti pačioje programėlėje.</p>",
+   "sections": [
+    {
+     "id": "data",
+     "title": "1. Kokius duomenis renkame",
+     "html": "<h3>Paskyros duomenys</h3><ul><li><strong>Registruotos paskyros</strong> (Sign in with Apple arba Google): tavo el. pašto adresas ir rodomas vardas, kuriuos pateikia prisijungimo paslauga, paskyros sukūrimo ir paskutinio prisijungimo laikas bei paskyros tapatybės patvirtinimo būdas.</li><li><strong>Svečio paskyros</strong>: LiftSmart gali naudoti neužsiregistravus. Svečio paskyra yra anoniminis identifikatorius, nesusietas su el. paštu ar vardu. Jei vėliau užsiregistruosi, tavo treniruočių duomenys bus perkelti į registruotą paskyrą.</li></ul><h3>Profilio duomenys, kuriuos pateiki</h3><ul><li>Kūno svoris ir pasirinktas svorio vienetas (kg/lb): naudojami kūno svorio pratimams registruoti ir krūviams parinkti.</li><li>Lytis (neprivaloma): naudojama tik parenkant programėlėje rodomas programas.</li><li>Treniruočių pasirinkimai iš pradinio ir programos klausimyno: tikslas, patirties lygis, grafikas, įranga ir raumenų akcentas.</li><li>Profilio nuotrauka (neprivaloma, tik registruotoms paskyroms): nuotrauka, kurią pasirenki sistemos nuotraukų parinkikliu. Programėlė gauna tik tą nuotrauką, o ne visą biblioteką. Ji saugo mažą kvadratinę kopiją (iki 512×512 taškų) be vietos ir fotoaparato duomenų ir naudoja ją tik tavo profilyje.</li></ul><h3>Treniruočių duomenys</h3><ul><li>Tavo sukurtos ar pradėtos treniruotės, planai ir programos, registruojamos serijos, pakartojimai, svoriai ir trukmės, atsiliepimai po pratimų, treniruočių istorija ir iš jos išvesti asmeniniai rekordai.</li><li>Tavo sukurti pratimai (pavadinimas, raumenų grupės, įranga, neprivaloma vaizdo įrašo nuoroda).</li></ul><h3>Pirkimo duomenys</h3><ul><li>Prenumeratos būsena (ar tavo paskyra turi aktyvią LiftSmart Pro teisę). Pačius mokėjimus tvarko tik Apple, mes niekada nematome tavo mokėjimo duomenų.</li></ul><h3>Atsiliepimai</h3><ul><li>Jei siunti atsiliepimą iš programėlės, gauname tavo parašytą žinutę ir, registruotų paskyrų atveju, su paskyra susietą el. paštą, kad galėtume atsakyti.</li></ul><h3>Naudojimo ir diagnostikos duomenys</h3><ul><li>Anoniminiai programėlės naudojimo įvykiai: peržiūrėti ekranai, naudotos funkcijos (pavyzdžiui, kad <em>kažkokia</em> treniruotė buvo baigta ir kiek ji truko), programėlės versija ir įrenginio modelis. Žr. <a href=\"#analytics\">Analitika</a>.</li><li>Strigčių ataskaitos ir našumo duomenys (pavyzdžiui, kad programėlė užstrigo, kuriame ekrane, su kokia programėlės versija ir įrenginio modeliu). Jie susieti su tavo paskyros identifikatoriumi, kad galėtume ištaisyti tau kylančias problemas; juose nėra treniruočių turinio.</li><li>Įrenginio vientisumo patikra (Apple App Attest), patvirtinanti, kad užklausos ateina iš tikros programėlės kopijos. Ji nesiunčia jokių asmens duomenų.</li></ul><div class=\"note\"><p>Išskyrus profilio nuotrauką, kurią nusprendi pridėti, nuotraukų <strong>nerenkame</strong>. Taip pat nerenkame tavo buvimo vietos, kontaktų, sveikatos programėlės duomenų ar reklamos identifikatoriaus (IDFA), o programėlėje nėra reklamų.</p></div>"
+    },
+    {
+     "id": "use",
+     "title": "2. Kaip juos naudojame",
+     "html": "<ul><li>Paslaugai teikti: saugoti ir sinchronizuoti treniruočių duomenis, kurti ir koreguoti programą, rodyti istoriją ir rekordus.</li><li>Pritaikyti: suderinti katalogą su tavo pasirinkimais, grafiku ir (jei nurodei) lytimi.</li><li>Prenumeratoms tvarkyti: patikrinti, ar tavo paskyra turi teisę į LiftSmart Pro.</li><li>Programėlei tobulinti: suprasti, kokios funkcijos naudojamos, pagal apibendrintą analitiką, taip pat rasti ir ištaisyti strigtis.</li><li>Atsakyti, kai į mus kreipiesi.</li></ul><p>Kai taikomas BDAR, remiamės sutarties su tavimi vykdymu (programėlės teikimu), tavo sutikimu (neprivalomiems duomenims, tokiems kaip lytis) ir teisėtu interesu tobulinti ir saugoti paslaugą.</p>"
+    },
+    {
+     "id": "sharing",
+     "title": "3. Kam juos perduodame",
+     "html": "<p>Duomenis perduodame tik patikimiems paslaugų teikėjams, kurie mūsų vardu užtikrina programėlės veikimą: prisijungimo, saugios duomenų saugyklos debesyje, prenumeratų tvarkymo, strigčių ataskaitų ir naudojimo analitikos teikėjams. Visus mokėjimus apdoroja Apple, o jei prisijungi per Apple ar Google, tapatybę patvirtina šie teikėjai. Visi duomenys perduodami ir saugomi šifruoti.</p><p>Neparduodame ir nenuomojame asmens duomenų ir neperduodame jų reklamuotojams ar duomenų brokeriams.</p>"
+    },
+    {
+     "id": "analytics",
+     "title": "4. Analitika",
+     "html": "<p>Renkame anoniminę naudojimo analitiką, kad suprastume, kaip programėlė naudojama: pavyzdžiui, kurie ekranai atidaromi, kad treniruotės pradedamos ir baigiamos ir ar baigiamas pradinis klausimynas. Analitikos duomenys susieti su atsitiktiniu programėlės egzemplioriaus identifikatoriumi, o ne su tavo vardu ar el. paštu. Nenaudojame reklamos identifikatoriaus (IDFA), nenaudojame analitikos reklamai ir nesekame tavęs kitų bendrovių programėlėse ar svetainėse.</p>"
+    },
+    {
+     "id": "retention",
+     "title": "5. Saugojimas ir ištrynimas",
+     "html": "<ul><li>Tavo duomenys saugomi tol, kol egzistuoja tavo paskyra.</li><li><strong>Ištrynus paskyrą</strong> iš mūsų serverių pašalinamas profilis ir visi treniruočių duomenys, atitinkamais atvejais atšaukiamas Sign in with Apple raktas ir ištrinamas tapatybės patvirtinimo įrašas. Tai padaryti gali programėlės skiltyje <em>Profilis → Ištrinti paskyrą</em>: žr. <a href=\"DeleteInstructions.html\">žingsnis po žingsnio instrukcijas</a>.</li><li>Profilio nuotrauka ištrinama iš mūsų serverių, kai ją pašalini ar pakeiti programėlėje ir kai ištrini paskyrą.</li><li>Apleistos svečių paskyros išvalomos kartu su jų duomenimis.</li><li>Strigčių ataskaitos saugomos iki 90 dienų. Atsiliepimų el. laiškai saugomi tik tiek, kiek reikia tavo prašymui išspręsti.</li></ul>"
+    },
+    {
+     "id": "rights",
+     "title": "6. Tavo teisės",
+     "html": "<p>Priklausomai nuo gyvenamosios vietos, įstatymai gali suteikti tau teisių į asmens duomenis, pavyzdžiui, teisę paklausti, ką apie tave saugome, arba prašyti tai ištrinti. Viską gali peržiūrėti ir ištrinti programėlėje; dėl kitų klausimų <a href=\"#contact\">susisiek su mumis</a> ir padėsime.</p>"
+    },
+    {
+     "id": "children",
+     "title": "7. Vaikai",
+     "html": "<p>LiftSmart nėra skirta jaunesniems nei 16 metų vaikams, ir sąmoningai nerenkame jų asmens duomenų. Jei manai, kad vaikas mums pateikė asmens duomenų, susisiek su mumis ir juos ištrinsime.</p>"
+    },
+    {
+     "id": "changes",
+     "title": "8. Šios politikos pakeitimai",
+     "html": "<p>Jei šią politiką reikšmingai pakeisime, atnaujinsime aukščiau nurodytą datą, o apie svarbius pakeitimus pranešime programėlėje. Toliau naudojantis programėle po pakeitimo laikoma, kad sutinki su atnaujinta politika.</p>"
+    },
+    {
+     "id": "contact",
+     "title": "9. Kontaktai",
+     "html": "<p>Dėl bet kokio privatumo klausimo ar prašymo rašyk adresu <a href=\"mailto:{{EMAIL}}\">{{EMAIL}}</a>.</p>"
+    }
+   ]
+  },
+  "delete": {
+   "title": "Paskyros ištrynimas",
+   "description": "Kaip visam laikui ištrinti LiftSmart paskyrą ir duomenis.",
+   "updated": "2026 m. rugsėjo 23 d.",
+   "intro": "<div class=\"note\"><p><strong>Ištrynimas yra galutinis ir jo atšaukti negalima.</strong> Visi tavo duomenys (treniruočių istorija, planai, programos, asmeniniai rekordai ir profilis) pašalinami iš mūsų serverių. Ištrynus paskyrą aktyvi prenumerata <em>nėra</em> atšaukiama: atšaukti ją reikia Apple Account prenumeratų nustatymuose.</p></div>",
+   "sections": [
+    {
+     "id": "inapp",
+     "title": "Ištrynimas programėlėje",
+     "html": "<ul><li>Atidaryk LiftSmart ir eik į skirtuką <strong>Profilis</strong>.</li><li>Slink į profilio ekrano apačią.</li><li>Paliesk <strong>Ištrinti paskyrą</strong> ir patvirtink.</li></ul><p>Taip ištrinami tavo treniruočių duomenys, profilis ir tapatybės patvirtinimo įrašas, o Sign in with Apple paskyroms dar ir atšaukiamas Apple prisijungimo raktas.</p>"
+    },
+    {
+     "id": "noaccess",
+     "title": "Negali pasiekti programėlės?",
+     "html": "<p>Jei nebeturi programėlės ar negali prisijungti, parašyk mums adresu <a href=\"mailto:{{EMAIL}}\">{{EMAIL}}</a> iš su paskyra susieto adreso, ir ją ištrinsime per 30 dienų.</p>"
+    },
+    {
+     "id": "guest",
+     "title": "O kaip svečio paskyros?",
+     "html": "<p>Svečio paskyros ištrinamos taip pat, programėlėje. Jei svečio paskyra apleista (pavyzdžiui, perėjus į registruotą paskyrą), ji automatiškai išvaloma kartu su duomenimis.</p>"
+    }
+   ]
+  }
+ }
+}

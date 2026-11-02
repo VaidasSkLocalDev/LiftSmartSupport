@@ -11,6 +11,7 @@ LANGS = {  # code: (folder, html lang, hreflang, native label, English label)
   "es": ("es/", "es", "es", "Español", "Spanish"),
   "fr": ("fr/", "fr", "fr", "Français", "French"),
   "ja": ("ja/", "ja", "ja", "日本語", "Japanese"),
+  "lt": ("lt/", "lt", "lt", "Lietuvių", "Lithuanian"),
   "pt-BR": ("pt-BR/", "pt-BR", "pt-BR", "Português (Brasil)", "Portuguese"),
 }
 PAGES = ["index.html", "TermsAndConditions.html", "PrivacyPolicy.html", "DeleteInstructions.html"]
@@ -51,7 +52,8 @@ def lang_menu(lang, rel, page):
 
 def nav(S, lang, rel, page, home):
     n = S["nav"]
-    links = (f'<a href="{rel}index.html#guided">{e(n["features"])}</a><a href="{rel}index.html#free">{e(n["free"])}</a><a href="{rel}index.html#faq">{e(n["faq"])}</a>'
+    folder = LANGS[lang][0]
+    links = (f'<a href="{rel}{folder}index.html#guided">{e(n["features"])}</a><a href="{rel}{folder}index.html#free">{e(n["free"])}</a><a href="{rel}{folder}index.html#faq">{e(n["faq"])}</a>'
              f'<a href="{rel}{LANGS[lang][0]}PrivacyPolicy.html">{e(n["privacy"])}</a><a href="{rel}{LANGS[lang][0]}TermsAndConditions.html">{e(n["terms"])}</a>')
     return f"""<nav class="nav"><div class="nav-inner">
   <a class="brand" href="{home}"><img class="brand-mark brand-mark-light" src="{rel}assets/img/appicon.png" alt=""><img class="brand-mark brand-mark-dark" src="{rel}assets/img/appicon-dark.png" alt="">LiftSmart</a>
